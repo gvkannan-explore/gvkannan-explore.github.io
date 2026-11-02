@@ -100,6 +100,7 @@ li::marker{color:var(--sage)}
 .item h3{font-size:1.08rem;font-weight:600;display:flex;flex-wrap:wrap;align-items:center;gap:8px}
 .tag{font:500 11px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;padding:4px 7px;border-radius:4px;background:var(--tint);color:var(--muted)}
 .item p{margin:0;max-width:68ch}
+.item ul{margin-top:2px}
 .meta{font-size:.9rem;color:var(--muted)}
 
 .fig{margin:0;display:flex;flex-direction:column;gap:10px}
@@ -258,17 +259,32 @@ footer{border-top:1px solid var(--rule);padding-block:24px 40px;font-size:.9rem;
   <h2>Projects</h2>
   <div class="item">
     <h3><a href="https://github.com/gvkannan-explore/rag-project">PubMed RAG with citation checks</a><span class="tag">In progress</span></h3>
-    <p>A citation-checked question-answering CLI over a frozen set of 200 breast-cancer PubMed abstracts. It compares four retrieval setups on the same questions: dense (pgvector), BM25, hybrid with reciprocal rank fusion, and hybrid plus a MiniLM cross-encoder reranker. A validator drops any generated claim that does not quote its cited abstract word for word, without another model call.</p>
+    <ul>
+      <li>Answers questions over a frozen set of 200 breast-cancer PubMed abstracts from a command-line tool.</li>
+      <li>Compares four retrieval setups on the same questions: dense (pgvector), BM25, hybrid with reciprocal rank fusion, and hybrid plus a MiniLM cross-encoder reranker.</li>
+      <li>Requires every generated claim to cite a PMID and quote that abstract word for word, and drops claims that fail without another model call.</li>
+      <li>Runs secret scanning, Ruff, Pyright and offline pytest checks before every push.</li>
+    </ul>
     <p class="meta">Postgres + pgvector · rank_bm25 · Sentence Transformers · Pydantic · pytest, Ruff, Pyright</p>
   </div>
   <div class="item">
     <h3><a href="https://github.com/gvkannan-explore/MultiLabel_N24/blob/t3/execute-a0-brownfield/plans/Skill-Based%20SDLC%20Brownfield%20Pilot.md">Skill-based SDLC vs. plain AI-assisted coding</a><span class="tag">In progress</span></h3>
-    <p>A pre-registered pilot on whether a targeted set of agent skills changes what a coding agent does in an existing codebase. The agent extends a frozen RoBERTa news classifier with two new encoders (ModernBERT, then UltraBERT) and, in a second task, fixes seeded CVEs, once with skills and once without. I score each run against a private rubric (broken contracts, duplicated code, "done" claimed without running CI, invented advisories) and record CI results, diff size, tokens and wall-clock time.</p>
+    <ul>
+      <li>Tests whether a targeted set of agent skills changes what a coding agent does in an existing codebase, running each task with skills on and off.</li>
+      <li>In the first task, the agent adds ModernBERT and then UltraBERT as encoders to a frozen RoBERTa news classifier.</li>
+      <li>In the second task, the agent finds and fixes seeded CVEs and cites the advisories.</li>
+      <li>Scores each run against a private rubric: broken contracts, duplicated code, "done" claimed without running CI, and invented advisories.</li>
+      <li>Records CI results, diff size, tokens and wall-clock time for every run.</li>
+    </ul>
     <p class="meta">Codex agent skills adapted from Matt Pocock's and poteto's sets · pytest CI · uv · OSV advisories</p>
   </div>
   <div class="item">
     <h3><a href="https://github.com/gvkannan-explore/MultiLabel_N24">News classification: fine-tuning vs. prompting</a><span class="tag">In progress</span></h3>
-    <p>Benchmarks a fine-tuned encoder (RoBERTa) against zero-shot, decoder-only LLMs served through vLLM on N24News category classification, to measure when prompting beats fine-tuning.</p>
+    <ul>
+      <li>Fine-tunes RoBERTa for N24News category classification.</li>
+      <li>Benchmarks it against zero-shot, decoder-only LLMs served through vLLM.</li>
+      <li>Measures when prompting beats fine-tuning.</li>
+    </ul>
     <p class="meta">PyTorch · Hugging Face Transformers · vLLM</p>
   </div>
 </section>
