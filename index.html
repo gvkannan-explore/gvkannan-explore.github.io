@@ -46,6 +46,9 @@ h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0}
 .focus{list-style:none;padding:0;margin:18px 0 0;display:flex;flex-wrap:wrap;gap:8px}
 .focus li{font:500 12px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--hero-bg);background:var(--sage);padding:7px 10px;border-radius:6px;max-width:none}
 .hero .lede{font-size:1.15rem;line-height:1.55;max-width:46ch;margin:18px 0 0;color:var(--hero-ink)}
+.hero .lede + .lede{margin-top:12px}
+.hero .cta{font-weight:500}
+.hero .cta a{color:var(--sage)}
 .hero .lede strong{color:var(--sage);font-weight:600}
 .hero nav{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
 .hero nav a{color:var(--hero-ink);text-decoration:none;font:500 14px/1 var(--body);padding:10px 14px;border:1px solid rgba(142,182,155,.45);border-radius:999px}
@@ -130,7 +133,9 @@ footer{border-top:1px solid var(--rule);padding-block:24px 40px;font-size:.9rem;
     <div>
       <div class="eyebrow">AI / ML Engineer</div>
       <h1>Vignesh Kannan</h1>
-      <p class="lede">AI/ML engineer with ~5 years at an early-stage healthcare startup, working across medical imaging, computer vision, agentic AI and LLM workflows. I have taken models from ideation and prototyping to <strong>FDA clearance</strong> and helped deploy them to production.</p>
+      <p class="lede">I've spent ~5 years at SimBioSys, an early-stage healthcare startup. My work covers medical imaging, computer vision, agentic AI and LLM workflows.</p>
+      <p class="lede">I have taken models from ideation and prototyping to <strong>FDA clearance</strong> and helped deploy them to production. They include 3D breast MRI segmentation that builds patient-specific digital twins for surgical planning, a 5-year recurrence risk model, and LLM pipelines that turn clinical documents into structured data.</p>
+      <p class="lede cta">If you find any of my work interesting, <a href="mailto:gvkannan.work@gmail.com">let's talk</a>.</p>
       <nav>
         <a href="https://www.linkedin.com/in/vignesh-kannang/">LinkedIn</a>
         <a href="https://github.com/gvkannan-explore">GitHub</a>
@@ -178,20 +183,20 @@ footer{border-top:1px solid var(--rule);padding-block:24px 40px;font-size:.9rem;
       <ul>
         <li>Led design, development and validation of FDA-cleared 3D multi-label segmentation models for breast DCE-MRI that produce patient-specific digital twins of breast tissue and lesions (510(k): <a href="https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K231130">#K231130</a>, <a href="https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K243189">#K243189</a>, <a href="https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K251766">#K251766</a>).</li>
         <li>Cut the second-generation segmentation system's false-negative rate from ~45% to under 10% through model improvements and post-processing updates.</li>
-        <li>Replaced a five-model segmentation ensemble with one model calibrated for breast MRI and the cancers found in it, cutting runtime from 20 minutes to about 3 minutes.</li>
-        <li>Designed and implemented MRI foundation models (Swin-UNETR with self-supervised pretraining on ~10k patients, trained with DeepSpeed) for downstream segmentation and multimodal risk stratification, improving benchmark performance by 10% without additional annotation.</li>
+        <li>Replaced a five-model segmentation ensemble with one model calibrated for breast MRI and the cancers found in it, which cut runtime from 20 minutes to about 3 minutes.</li>
+        <li>Built MRI foundation models on Swin-UNETR, pretrained self-supervised on ~10k patients with DeepSpeed, that raised downstream segmentation and risk-stratification benchmarks by 10% without new annotation.</li>
         <li>Co-led an FDA-cleared multimodal survival model combining structured clinical data with imaging features to predict 5-year recurrence risk (510(k): <a href="https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K260023">#K260023</a>).</li>
-        <li>Contributed to verification and validation testing of the multimodal risk model by creating tests that ensured the model met accuracy standards and produced predictions that were repeatable and reproducible within the expected tolerance.</li>
+        <li>Contributed to verification and validation of the multimodal risk model by writing tests that checked it met accuracy standards and gave repeatable, reproducible predictions within the expected tolerance.</li>
         <li>Benchmarked 3D registration for motion correction across contrast phases: rigid (SimpleITK), learning-based deformable (VoxelMorph) and a locally affine, intensity-aware method (Periaswamy &amp; Farid, 2006).</li>
       </ul>
       <figure class="fig">
         <div class="frame plan"><img src="assets/img/tumorsight-plan-margins.jpg" alt="TumorSight Plan: 3D breast rendering with two tumors, MRI views of 1 cm surgical margins for unicentric and multicentric cases, and a table of apparent tumor volume at a 1 cm margin in 2D versus 3D"></div>
-        <figcaption>TumorSight Plan shows and tabulates the tissue removed at surgical margins adjustable from 0 to 2 cm. Image © SimBioSys, Inc., from <a href="https://simbiosys.com">simbiosys.com</a>, shown with credit to SimBioSys.</figcaption>
+        <figcaption>TumorSight Plan shows and tabulates the tissue removed at surgical margins adjustable from 0 to 2 cm. Image © SimBioSys, Inc., from <a href="https://simbiosys.com">simbiosys.com</a>.</figcaption>
       </figure>
 
       <div class="group">Evaluation &amp; release quality</div>
       <ul>
-        <li>Built an automated evaluation suite that scores every major segmentation model iteration on ~26 metrics across 5 categories, covering both offline and online evaluation.</li>
+        <li>Built an automated evaluation suite that scores every major segmentation model iteration on ~26 metrics across 5 categories, offline and online.</li>
         <li>Broke results down by patient cohort, tumor size, nodal status, MRI field strength (1.5T vs 3.0T) and scanner manufacturer.</li>
         <li>Paired the metric suite with manual review by an in-house expert to compare model versions and write the release summary.</li>
         <li>Gated every release tag on end-to-end pytest model-performance tests, then reviewed models in a staging environment before production.</li>
@@ -202,17 +207,17 @@ footer{border-top:1px solid var(--rule);padding-block:24px 40px;font-size:.9rem;
       <div class="group">LLM &amp; clinical NLP</div>
       <ul>
         <li>Designed a multi-document LLM synthesis pipeline that combines clinical reports into structured outputs with ~88% schema compliance and ~75% clinical agreement, now in staging with clinician feedback.</li>
-        <li>Architected a privacy-preserving document-extraction pipeline (OCR + small LLMs) that structured ~3,000 pathology reports and cut manual curation by 40% under HIPAA.</li>
+        <li>Built a HIPAA-compliant document-extraction pipeline (OCR + small LLMs) that structured ~3,000 pathology reports and cut manual curation by 40%.</li>
         <li>Built a LangGraph + LangChain agentic pipeline for surgical-planning literature triage with hybrid retrieval and reranking on self-hosted LLMs (Qwen3, MedGemma via vLLM), reaching ~85% expert agreement.</li>
       </ul>
 
       <div class="group">MLOps &amp; delivery</div>
       <ul>
-        <li>Built an automated, Git-versioned AWS pipeline (S3, ECR, EC2, Batch) for multi-GPU training with containerized CI/CD and internal APIs for inference, cutting development and deploy cycles by 85%.</li>
+        <li>Built an automated, Git-versioned AWS pipeline (S3, ECR, EC2, Batch) for multi-GPU training, with containerized CI/CD and internal APIs for inference, that cut development and deploy cycles by 85% (2 weeks to 2 days).</li>
         <li>Ran imaging ETL over 5+ TB (~10k patients, 50k+ MRI series) with cron jobs and AWS Batch.</li>
         <li>Tracked lineage with a dataset manifest per model checkpoint, md5-verified production checkpoints and a W&amp;B model registry.</li>
-        <li>Coordinated external vendors and internal teams to run an FDA-compliant annotation pipeline, scaling training and validation data 10× with model-assisted pre-labels from in-house segmentation models and standardized QA protocols.</li>
-        <li>Served as lead engineer on segmentation, writing design docs that turned product goals into model architecture and data requirements and presenting an executive summary on the improvements made at every major release.</li>
+        <li>Coordinated external vendors and internal teams to run an FDA-compliant annotation pipeline that scaled training and validation data 10× with model-assisted pre-labels from in-house segmentation models and standardized QA protocols.</li>
+        <li>As lead engineer on segmentation, wrote design docs that turned product goals into model architecture and data requirements, and presented an executive summary of the improvements at every major release.</li>
         <li>Mentored teammates on AI-assisted development with Cursor and other coding-agent tools.</li>
       </ul>
       <p class="tools"><b>Tools</b> PyTorch, PyTorch Lightning, MONAI, AWS, Docker, LangGraph, LangChain, Pydantic, vLLM, W&amp;B, Hugging Face, FastAPI</p>
@@ -251,8 +256,8 @@ footer{border-top:1px solid var(--rule);padding-block:24px 40px;font-size:.9rem;
 <section id="projects">
   <h2>Projects</h2>
   <div class="item">
-    <h3><a href="https://github.com/gvkannan-explore/rag-project">PubMed RAG: does reranking earn its latency?</a><span class="tag">In progress</span></h3>
-    <p>A citation-checked question-answering CLI over a frozen set of 200 breast-cancer PubMed abstracts. It compares four retrieval setups on the same questions: dense (pgvector), BM25, hybrid with reciprocal rank fusion, and hybrid plus a MiniLM cross-encoder reranker. Every generated claim must quote its cited abstract verbatim, or it is dropped without another model call.</p>
+    <h3><a href="https://github.com/gvkannan-explore/rag-project">PubMed RAG with citation checks</a><span class="tag">In progress</span></h3>
+    <p>A citation-checked question-answering CLI over a frozen set of 200 breast-cancer PubMed abstracts. It compares four retrieval setups on the same questions: dense (pgvector), BM25, hybrid with reciprocal rank fusion, and hybrid plus a MiniLM cross-encoder reranker. A validator drops any generated claim that does not quote its cited abstract word for word, without another model call.</p>
     <p class="meta">Postgres + pgvector · rank_bm25 · Sentence Transformers · Pydantic · pytest, Ruff, Pyright</p>
   </div>
   <div class="item">
