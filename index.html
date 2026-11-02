@@ -184,7 +184,7 @@ footer{border-top:1px solid var(--rule);padding-block:24px 40px;font-size:.9rem;
         <li>Led design, development and validation of FDA-cleared 3D multi-label segmentation models for breast DCE-MRI that produce patient-specific digital twins of breast tissue and lesions (510(k): <a href="https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K231130">#K231130</a>, <a href="https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K243189">#K243189</a>, <a href="https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K251766">#K251766</a>).</li>
         <li>Cut the second-generation segmentation system's false-negative rate from ~45% to under 10% through model improvements and post-processing updates.</li>
         <li>Replaced a five-model segmentation ensemble with one model calibrated for breast MRI and the cancers found in it, which cut runtime from 20 minutes to about 3 minutes.</li>
-        <li>Built MRI foundation models on Swin-UNETR, pretrained self-supervised on ~10k patients with DeepSpeed, that raised downstream segmentation and risk-stratification benchmarks by 10% without new annotation.</li>
+        <li>Built MRI foundation models using Swin-UNETR, pretrained self-supervised on ~10k patients with DeepSpeed, that raised downstream segmentation and risk-stratification benchmarks by 10% without new annotation.</li>
         <li>Co-led an FDA-cleared multimodal survival model combining structured clinical data with imaging features to predict 5-year recurrence risk (510(k): <a href="https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K260023">#K260023</a>).</li>
         <li>Contributed to verification and validation of the multimodal risk model by writing tests that checked it met accuracy standards and gave repeatable, reproducible predictions within the expected tolerance.</li>
         <li>Benchmarked 3D registration for motion correction across contrast phases: rigid (SimpleITK), learning-based deformable (VoxelMorph) and a locally affine, intensity-aware method (Periaswamy &amp; Farid, 2006).</li>
@@ -215,9 +215,10 @@ footer{border-top:1px solid var(--rule);padding-block:24px 40px;font-size:.9rem;
       <ul>
         <li>Built an automated, Git-versioned AWS pipeline (S3, ECR, EC2, Batch) for multi-GPU training, with containerized CI/CD and internal APIs for inference, that cut development and deploy cycles by 85% (2 weeks to 2 days).</li>
         <li>Ran imaging ETL over 5+ TB (~10k patients, 50k+ MRI series) with cron jobs and AWS Batch.</li>
-        <li>Tracked lineage with a dataset manifest per model checkpoint, md5-verified production checkpoints and a W&amp;B model registry.</li>
+        <li>Tracked experiments in MLflow at first, then moved training, tuning and test metrics and the model registry to Weights &amp; Biases.</li>
+        <li>Tracked lineage with a dataset manifest per model checkpoint and md5-verified production checkpoints.</li>
         <li>Coordinated external vendors and internal teams to run an FDA-compliant annotation pipeline that scaled training and validation data 10× with model-assisted pre-labels from in-house segmentation models and standardized QA protocols.</li>
-        <li>As lead engineer on segmentation, wrote design docs that turned product goals into model architecture and data requirements, and presented an executive summary of the improvements at every major release.</li>
+        <li>Served as lead engineer on segmentation, writing design docs that turned product goals into model architecture and data requirements and presenting an executive summary of the improvements at every major release.</li>
         <li>Mentored teammates on AI-assisted development with Cursor and other coding-agent tools.</li>
       </ul>
       <p class="tools"><b>Tools</b> PyTorch, PyTorch Lightning, MONAI, AWS, Docker, LangGraph, LangChain, Pydantic, vLLM, W&amp;B, Hugging Face, FastAPI</p>
@@ -261,6 +262,11 @@ footer{border-top:1px solid var(--rule);padding-block:24px 40px;font-size:.9rem;
     <p class="meta">Postgres + pgvector · rank_bm25 · Sentence Transformers · Pydantic · pytest, Ruff, Pyright</p>
   </div>
   <div class="item">
+    <h3><a href="https://github.com/gvkannan-explore/MultiLabel_N24/blob/t3/execute-a0-brownfield/plans/Skill-Based%20SDLC%20Brownfield%20Pilot.md">Skill-based SDLC vs. plain AI-assisted coding</a><span class="tag">In progress</span></h3>
+    <p>A pre-registered pilot on whether a targeted set of agent skills changes what a coding agent does in an existing codebase. The agent extends a frozen RoBERTa news classifier with two new encoders (ModernBERT, then UltraBERT) and, in a second task, fixes seeded CVEs, once with skills and once without. I score each run against a private rubric (broken contracts, duplicated code, "done" claimed without running CI, invented advisories) and record CI results, diff size, tokens and wall-clock time.</p>
+    <p class="meta">Codex agent skills adapted from Matt Pocock's and poteto's sets · pytest CI · uv · OSV advisories</p>
+  </div>
+  <div class="item">
     <h3><a href="https://github.com/gvkannan-explore/MultiLabel_N24">News classification: fine-tuning vs. prompting</a><span class="tag">In progress</span></h3>
     <p>Benchmarks a fine-tuned encoder (RoBERTa) against zero-shot, decoder-only LLMs served through Ollama on N24News category classification, to measure when prompting beats fine-tuning.</p>
     <p class="meta">PyTorch · Hugging Face Transformers · Ollama</p>
@@ -299,7 +305,7 @@ footer{border-top:1px solid var(--rule);padding-block:24px 40px;font-size:.9rem;
     <dt>Languages</dt><dd>Python, SQL</dd>
     <dt>ML &amp; imaging</dt><dd>PyTorch, PyTorch Lightning (DDP), DeepSpeed, MONAI, scikit-learn, SimpleITK, VoxelMorph, DICOM / NIfTI</dd>
     <dt>LLM &amp; NLP</dt><dd>LangGraph, LangChain, vLLM, Ollama, Pydantic, Hugging Face Transformers, spaCy, prompt engineering</dd>
-    <dt>Cloud &amp; MLOps</dt><dd>AWS (S3, ECR, EC2, Batch), Docker, CI/CD, FastAPI, W&amp;B</dd>
+    <dt>Cloud &amp; MLOps</dt><dd>AWS (S3, ECR, EC2, Batch), Docker, CI/CD, FastAPI, Weights &amp; Biases, MLflow</dd>
   </dl>
 </section>
 
