@@ -7,217 +7,177 @@
 <meta name="description" content="AI/ML engineer who has taken medical imaging and clinical LLM models from prototype to FDA clearance and production.">
 <meta property="og:title" content="Vignesh Kannan · AI/ML Engineer">
 <meta property="og:description" content="Medical imaging, computer vision, agentic AI and LLM workflows. Models behind four FDA 510(k) clearances.">
-<style>html{-webkit-text-size-adjust:100%}body{margin:0}img{max-width:100%}
-/* defensive defaults (defensivecss.dev) */
-html{scrollbar-gutter:stable;background:var(--paper,#FBFCFC)}
-img{height:auto}
-p,li,dd,figcaption,h1,h2,h3,h4{overflow-wrap:break-word}
-.hero-in>*,.chapters>*,.k-list>*,.readout>*,.news>*,.role-head>*,.skills>*{min-width:0}
-.hero nav a,.k,.news a{min-width:0}
-.hero nav a{min-height:40px;display:inline-flex;align-items:center}
-/* scroll chapters: one experience area per screen, sticky rail with progress */
-.chapters{display:grid;grid-template-columns:minmax(140px,max-content) minmax(0,1fr);gap:36px;margin-top:8px}
-.rail{align-self:start;display:flex;flex-direction:column;padding-left:16px;--p:0}
-.rail::before,.rail::after{content:"";position:absolute;left:0;top:0;width:2px;border-radius:2px}
-.rail::before{height:100%;background:var(--rule)}
-.rail::after{height:calc(var(--p) * 100%);background:var(--teal)}
-.rail a{position:relative;padding:9px 0;color:var(--muted);text-decoration:none;font:500 13px/1.3 var(--body)}
-.rail a.on{color:var(--ink);font-weight:600}
-.rail a:hover{color:var(--ink)}
-.chapter{min-height:78vh;min-height:78svh;display:flex;flex-direction:column;justify-content:center;gap:18px;padding-block:28px;scroll-margin-top:24px}
-.chapter-title{font-family:var(--display);font-size:clamp(1.9rem,4.4vw,2.8rem);font-weight:800;letter-spacing:-.025em;line-height:1.05;margin:0}
-.chapter-title::after{content:"";display:block;width:48px;height:3px;background:var(--sage);border-radius:2px;margin-top:14px}
-.chapter li{font-size:1.02rem}
-@media (max-width:760px){.chapters{grid-template-columns:1fr;gap:0}.rail{display:none}.chapter{min-height:auto;padding-block:36px}}
-@media (min-height:520px){.rail{position:sticky;top:calc(env(safe-area-inset-top,0px) + 40px)}}
-/* reveal: only when JS is running and motion is allowed */
-.reveal-ready .chapter-title{opacity:0;transform:translateX(-28px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
-.reveal-ready .chapter li,.reveal-ready .chapter .fig{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s cubic-bezier(.2,.7,.2,1);transition-delay:calc(.15s + var(--i,0) * .07s)}
-.reveal-ready .chapter.in .chapter-title,.reveal-ready .chapter.in li,.reveal-ready .chapter.in .fig{opacity:1;transform:none}
-.reveal-ready .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
-.reveal-ready .reveal.in{opacity:1;transform:none}
-</style>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
-/* Layout: deep-teal hero band with the digital-twin image, clearance tickets overlapping its lower edge,
-   then a 760px reading column. Faint concentric rings in the hero echo an MRI slice. */
-:root{
-  --paper:#FBFCFC; --deep:#0F3D3E; --teal:#14746F; --sage:#8EB69B;
-  --ink:#0F3D3E; --muted:#4A6766; --rule:#D9E5E0; --tint:#EAF2ED; --card:#FFFFFF;
-  --link:#14746F; --hero-bg:#0F3D3E; --hero-ink:#FBFCFC; --hero-muted:#B9D3C3;
-  --display:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
-  --body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
-  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
-}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --paper:#0A2627; --ink:#E9F1EC; --muted:#A3BFB1; --rule:#1E4A4A; --tint:#12403F; --card:#0F3D3E;
-  --link:#8EB69B; --hero-bg:#0F3D3E; --hero-ink:#FBFCFC; --hero-muted:#A3BFB1; color-scheme:dark}}
-:root[data-theme="dark"]{
-  --paper:#0A2627; --ink:#E9F1EC; --muted:#A3BFB1; --rule:#1E4A4A; --tint:#12403F; --card:#0F3D3E;
-  --link:#8EB69B; --hero-bg:#0F3D3E; --hero-ink:#FBFCFC; --hero-muted:#A3BFB1; color-scheme:dark}
+/* Style follows the academicpages homepage of RikiyaT.github.io: white page, thin masthead,
+   system sans-serif, blue links, section headings with a fading rule, cards with soft gradients. */
+html{-webkit-text-size-adjust:100%;scrollbar-gutter:stable;background:#fff}
+body{margin:0;background:#fff;color:#222;font:16px/1.65 -apple-system,".SFNSText-Regular","San Francisco",Roboto,"Segoe UI","Helvetica Neue",Arial,sans-serif}
+img{max-width:100%;height:auto}
+p,li,dd,dt,figcaption,h1,h2,h3,h4{overflow-wrap:break-word}
+.quick-links>*,.achievement-list>*,.skills>*,.masthead-in>*{min-width:0}
+a{color:#598BE7;text-decoration:none}
+a:hover,a:focus{text-decoration:underline}
+a:focus-visible{outline:2px solid #598BE7;outline-offset:2px;border-radius:3px}
+h1,h2,h3,h4{text-wrap:balance}
+.col{max-width:800px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
 
-body{background:var(--paper,#FBFCFC);color:var(--ink,#0F3D3E);font:16px/1.65 var(--body)}
-a{color:var(--link,#14746F);text-underline-offset:3px;text-decoration-thickness:1px}
-a:hover{text-decoration-thickness:2px}
-a:focus-visible{outline:2px solid var(--sage);outline-offset:3px;border-radius:3px}
-h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0}
-.col{max-width:760px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+/* masthead */
+.masthead{background:#fff;border-bottom:1px solid #f2f3f3;z-index:10}
+@media (min-height:520px){.masthead{position:sticky;top:0}}
+.masthead-in{max-width:1000px;margin:0 auto;padding:12px max(20px,env(safe-area-inset-right,0px)) 12px max(20px,env(safe-area-inset-left,0px));display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 22px;font-size:.95rem}
+.masthead a{color:#7a8288;min-height:32px;display:inline-flex;align-items:center}
+.masthead a:hover{color:#494e52;text-decoration:none}
+.masthead .site-title{color:#222;font-weight:700;font-size:1.1rem;margin-right:8px}
+section[id]{scroll-margin-top:72px}
+@media (max-width:520px){section[id]{scroll-margin-top:110px}}
 
-/* hero */
-.hero{background:var(--hero-bg,#0F3D3E);color:var(--hero-ink,#FBFCFC);position:relative;overflow:hidden}
-.hero::before{content:"";position:absolute;right:-180px;top:-160px;width:620px;height:620px;border-radius:50%;
-  background:repeating-radial-gradient(circle, transparent 0 22px, rgba(142,182,155,.13) 22px 23px) no-repeat;pointer-events:none}
-.hero-in{max-width:1000px;container-type:inline-size;margin:0 auto;padding-block:64px 104px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
-  display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(28px,5vw,48px);align-items:center;position:relative}
-.eyebrow{font:500 12px/1.3 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--sage)}
-.hero h1{font-size:clamp(1.9rem,7vw,3.5rem);overflow-wrap:anywhere;font-weight:800;line-height:.98;letter-spacing:-.03em;margin-top:14px}
-.focus{list-style:none;padding:0;margin:18px 0 0;display:flex;flex-wrap:wrap;gap:8px}
-.focus li{font:500 12px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--hero-bg);background:var(--sage);padding:7px 10px;border-radius:6px;max-width:none}
-.hero .lede{font-size:1.15rem;line-height:1.55;max-width:46ch;margin:18px 0 0;color:var(--hero-ink)}
-.hero .lede + .lede{margin-top:12px}
-.hero .cta{font-weight:500}
-.hero .cta a{color:var(--sage)}
-.hero .lede strong{color:var(--sage);font-weight:600}
-.hero nav{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
-.hero nav a{color:var(--hero-ink);text-decoration:none;font:500 14px/1 var(--body);padding:10px 14px;border:1px solid rgba(142,182,155,.45);border-radius:999px}
-.hero nav a:hover{background:rgba(142,182,155,.16)}
-.twin{margin:0 auto;width:100%;max-width:340px;display:flex;flex-direction:column;gap:8px}
-.frame{max-width:100%;overflow:hidden;position:relative}
-.twin .frame{aspect-ratio:726/600;border-radius:14px;background:#000000;border:1px solid rgba(142,182,155,.4)}
-.twin img{width:100%;height:100%;object-fit:contain;display:block}
-.twin figcaption{font-size:.8rem;line-height:1.45;color:var(--hero-muted)}
-.twin figcaption a{color:var(--hero-muted)}
-@media (max-width:720px){.hero-in{padding-block:48px 96px}}
+/* page */
+main{padding-block:12px 40px;font-size:.95rem;line-height:1.65}
+.hero-title{font-size:2rem;line-height:1.2;margin:1.1rem 0 .3rem}
+.hero-subtitle{color:#6c7380;font-size:.98rem;font-weight:600;margin:0 0 .9rem}
+.about-photo{float:right;width:clamp(220px,32vw,300px);margin:6px 0 12px 22px}
+.about-photo .frame{aspect-ratio:726/600;border-radius:10px;overflow:hidden;background:#000;box-shadow:0 10px 24px rgba(0,0,0,.12)}
+.about-photo img{width:100%;height:100%;object-fit:contain;display:block}
+.about-photo figcaption{font-size:.75rem;line-height:1.45;color:#9aa3b5;margin-top:6px}
+.about-photo figcaption a{color:#9aa3b5;text-decoration:underline}
+@media (max-width:700px){.about-photo{float:none;margin:8px auto 16px;max-width:300px}}
+main p{margin:0 0 .9rem}
+.intro-end{clear:both}
+.quick-links{margin:.4em 0 1em;font-size:.92rem;color:#4b4b4b;text-align:center}
+.quick-links .divider{color:#b0b7c3;margin:0 .35em}
+.highlight-card{background:linear-gradient(135deg,#f3f6ff 0%,#eaf0ff 100%);border:1px solid #d7e2ff;padding:14px 16px;border-radius:12px;box-shadow:0 8px 18px rgba(0,0,0,.08);margin:14px 0 18px;text-align:center;font-weight:500}
 
-/* clearance tickets */
-.tickets{margin-top:-64px;position:relative}
-.tickets-card{background:var(--card);border:1px solid var(--rule);border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:16px;box-shadow:0 18px 40px -28px rgba(15,61,62,.55)}
-.label{font:500 12px/1.3 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
-.k-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr));gap:10px}
-.k{display:flex;flex-direction:column;gap:6px;padding:12px 14px;border-radius:10px;background:var(--tint);text-decoration:none;color:var(--ink);border-left:3px solid var(--sage)}
-.k b{font:500 15px/1.2 var(--mono);color:var(--link)}
-.k small{font-size:.8rem;color:var(--muted);line-height:1.35}
-.k:hover b{text-decoration:underline}
-.readout{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,120px),1fr));row-gap:14px;border-top:1px dashed var(--rule);padding-top:14px}
-.readout div{padding:0 12px;border-left:1px solid var(--rule);display:flex;flex-direction:column;gap:2px}
-.readout div:first-child{border-left:0;padding-left:0}
-.readout b{font:600 1.25rem/1.15 var(--display);color:var(--ink);font-variant-numeric:tabular-nums}
-.readout span{font-size:.8rem;color:var(--muted);line-height:1.35}
-@media (max-width:640px){.readout div{border-left:0;padding-left:0}}
+.section-heading{font-size:1.32rem;letter-spacing:.01em;font-weight:700;margin:1.4em 0 .6em;display:flex;align-items:center;gap:.5rem}
+.section-heading::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,rgba(89,139,231,.35),rgba(89,139,231,0))}
 
-/* sections */
-main{display:flex;flex-direction:column;gap:64px;padding-block:64px 80px}
-section{display:flex;flex-direction:column;gap:22px}
-section>h2{font-size:1.7rem;font-weight:800;letter-spacing:-.02em;display:flex;align-items:center;gap:12px}
-section>h2::after{content:"";flex:1;height:1px;background:var(--rule)}
-.role{display:flex;flex-direction:column;gap:12px}
-.role-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:4px 16px}
-.role-head h3{font-size:1.15rem;font-weight:600;min-width:0}
-.role-head h3 span{color:var(--muted);font-weight:400}
-.when{font:400 13px/1.4 var(--mono);color:var(--muted);font-variant-numeric:tabular-nums}
-.group-unused{align-self:flex-start;font:500 11px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink);background:var(--tint);border:1px solid var(--rule);padding:6px 9px;border-radius:999px;margin-top:10px}
-ul{margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:8px}
-li{max-width:68ch}
-li::marker{color:var(--sage)}
-.tools{font-size:.88rem;color:var(--muted);margin:0}
-.tools b{font-weight:500;color:var(--ink)}
-.roles{display:flex;flex-direction:column;gap:36px}
+/* highlights */
+.achievement-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:.9rem;margin:0 0 1.3rem}
+.achievement-card{background:linear-gradient(135deg,#fcfdff 0%,#f3f7ff 100%);border:1px solid #dfe7f8;border-radius:12px;box-shadow:0 8px 18px rgba(0,0,0,.06);padding:.95rem 1rem}
+.achievement__meta{font-size:.8rem;color:#6c7380;letter-spacing:.04em;text-transform:uppercase;margin-bottom:.28rem}
+.achievement__title{font-size:1rem;font-weight:700}
+.achievement-card p{margin:.32rem 0 0}
+.achievement-card ul{margin:.32rem 0 0;padding-left:1.2rem}
 
-.item{display:flex;flex-direction:column;gap:6px}
-.item h3{font-size:1.08rem;font-weight:600;display:flex;flex-wrap:wrap;align-items:center;gap:8px}
-.item h3 > a{min-width:0}
-.tag{font:500 11px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;padding:4px 7px;border-radius:4px;background:var(--tint);color:var(--muted)}
-.item p{margin:0;max-width:68ch}
-.item ul{margin-top:2px}
-.meta{font-size:.9rem;color:var(--muted)}
+/* news */
+.news-box{max-height:260px;overflow-y:auto;padding:2px 0;margin-bottom:18px}
+.news-box ul{list-style:disc;padding-left:1.5rem;margin:.5rem 0}
+.news-box li{margin-bottom:.35rem}
 
-.fig{margin:0;display:flex;flex-direction:column;gap:10px}
-.fig .frame{aspect-ratio:1400/1010;border-radius:12px;border:1px solid var(--rule);background:var(--tint)}
-.fig img{width:100%;height:100%;object-fit:contain;display:block;background:#FFFFFF}
-.fig .frame.plan{aspect-ratio:1240/805}
-.fig figcaption{font-size:.85rem;color:var(--muted);line-height:1.5}
+/* experience, education */
+.entry-list{list-style:none;padding:0;margin:0}
+.entry{padding:.75rem 0}
+.entry__meta{font-size:.88rem;color:#6c7380;margin-bottom:.25rem;font-variant-numeric:tabular-nums}
+.entry__title{font-weight:700}
+.entry__group{font-size:.95rem;font-weight:700;color:#4b4b4b;margin:1.1rem 0 .3rem}
+.entry ul,.pub-item ul{margin:.3rem 0 .4rem;padding-left:1.4rem;list-style:disc}
+.entry li,.pub-item li{margin-bottom:.3rem}
+.entry .entry__meta.after{margin-top:.5rem}
+.entry .entry__meta.after b{font-weight:600;color:#4b4b4b}
 
-.news{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:12px}
-.news a{display:flex;flex-direction:column;gap:6px;padding:16px;border-radius:12px;border:1px solid var(--rule);background:var(--card);text-decoration:none;color:var(--ink)}
-.news a:hover{border-color:var(--sage)}
-.news .src{font:500 11px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--link)}
-.news b{font-weight:600;line-height:1.35}
-.news small{color:var(--muted);font-size:.85rem}
+/* figures */
+.fig{margin:.9rem 0 1rem}
+.fig .frame{border-radius:10px;overflow:hidden;border:1px solid #e5e8f3;background:#fff;box-shadow:0 8px 18px rgba(0,0,0,.06)}
+.fig img{width:100%;display:block}
+.fig figcaption{font-size:.82rem;color:#6c7380;line-height:1.5;margin-top:.5rem}
 
-.edu{display:flex;flex-direction:column;gap:10px}
-.skills{display:grid;grid-template-columns:minmax(0,max-content) minmax(0,1fr);gap:10px 18px;margin:0}
-.skills dt{font:500 13px/1.65 var(--mono);color:var(--muted)}
+/* projects, publications */
+.pub-list{list-style:none;padding:0;margin:0}
+.pub-item{padding:0 0 1rem;margin-bottom:1rem;border-bottom:1px solid #e8ebf3}
+.pub-item:last-child{border-bottom:none;margin-bottom:.2rem;padding-bottom:.2rem}
+.pub-title{font-size:1.05rem;font-weight:700}
+.badge{display:inline-block;margin:.18rem 0 .3rem .3rem;padding:.12rem .6rem;border-radius:999px;font-size:.78rem;font-weight:700;letter-spacing:.01em;color:#8a4800;background:#fff2cd;border:1px solid #ffd487;vertical-align:middle}
+.badge.done{color:#1f6b3a;background:#e3f6e9;border-color:#a9dfbb}
+.pub-meta{font-size:.88rem;color:#6c7380}
+
+/* skills */
+.skills{display:grid;grid-template-columns:minmax(0,max-content) minmax(0,1fr);gap:8px 18px;margin:0}
+.skills dt{font-weight:600;color:#6c7380}
 .skills dd{margin:0}
 @media (max-width:520px){.skills{grid-template-columns:1fr;gap:2px}.skills dd{margin-bottom:10px}}
 
-footer{overflow-wrap:anywhere;border-top:1px solid var(--rule);padding-block:24px 40px;font-size:.9rem;color:var(--muted);display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
-@media (prefers-reduced-motion:no-preference){.k,.news a,.hero nav a{transition:background .2s,border-color .2s}}
+footer{border-top:1px solid #f2f3f3;padding-block:20px 36px;font-size:.85rem;color:#9aa3b5;display:flex;flex-wrap:wrap;justify-content:center;gap:6px 14px;text-align:center}
 </style>
 </head>
 <body>
 
-<header class="hero">
-  <div class="hero-in">
-    <div>
-      <div class="eyebrow">AI / ML Engineer</div>
-      <h1>Vignesh Kannan</h1>
-      <p class="lede">I've spent ~5 years at SimBioSys, an early-stage healthcare startup. My work covers medical imaging, computer vision, agentic AI and LLM workflows.</p>
-      <p class="lede">I have taken models from ideation and prototyping to <strong>FDA clearance</strong> and helped deploy them to production. They include 3D breast MRI segmentation that builds patient-specific digital twins for surgical planning, a 5-year recurrence risk model, and LLM pipelines that turn clinical documents into structured data.</p>
-      <p class="lede cta">If you find any of my work interesting, <a href="mailto:gvkannan.work@gmail.com">let's talk</a>.</p>
-      <nav>
-        <a href="https://www.linkedin.com/in/vignesh-kannang/">LinkedIn</a>
-        <a href="https://github.com/gvkannan-explore">GitHub</a>
-        <a href="mailto:gvkannan.work@gmail.com">Email</a>
-        <a href="#publications">Publications</a>
-      </nav>
-    </div>
-    <figure class="twin">
-      <div class="frame">
-        <img src="assets/img/tumorsight-viz-3d.jpg" alt="3D rendering of both breasts from a DCE-MRI scan, with two tumors in blue, blood vessels in red and breast tissue in lavender">
-      </div>
-      <figcaption>TumorSight Viz 3D segmentation from breast DCE-MRI. Cropped from Fig. 1 of <a href="https://doi.org/10.1038/s41523-024-00696-6">npj Breast Cancer (2024)</a>, © The Authors, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</figcaption>
-    </figure>
-  </div>
+<header class="masthead">
+  <nav class="masthead-in" aria-label="Site">
+    <a class="site-title" href="#top">Vignesh Kannan</a>
+    <a href="#highlights">Highlights</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#publications">Publications</a>
+    <a href="#skills">Skills</a>
+  </nav>
 </header>
 
-<div class="col tickets">
-  <div class="tickets-card">
-    <div class="label">FDA 510(k) clearances I built models for</div>
-    <div class="k-list">
-      <a class="k" href="https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K231130"><b>#K231130</b><small>Breast DCE-MRI segmentation</small></a>
-      <a class="k" href="https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K243189"><b>#K243189</b><small>Breast DCE-MRI segmentation</small></a>
-      <a class="k" href="https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K251766"><b>#K251766</b><small>Breast DCE-MRI segmentation</small></a>
-      <a class="k" href="https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K260023"><b>#K260023</b><small>5-year recurrence risk model</small></a>
-    </div>
-    <div class="readout">
-      <div><b>85%</b><span>shorter train-to-deploy cycle</span></div>
-      <div><b>10×</b><span>annotated training data</span></div>
-      <div><b>40%</b><span>less manual curation</span></div>
-      <div><b>20 → 3 min</b><span>segmentation runtime</span></div>
-      <div><b>~26</b><span>metrics gate each release</span></div>
-    </div>
-  </div>
+<main class="col" id="top">
+
+<h1 class="hero-title">Vignesh Kannan</h1>
+<div class="hero-subtitle">Medical imaging · Computer vision · LLM &amp; agentic AI · MLOps</div>
+<figure class="about-photo">
+  <div class="frame"><img src="assets/img/tumorsight-viz-3d.jpg" alt="3D rendering of both breasts from a DCE-MRI scan, with two tumors in blue, blood vessels in red and breast tissue in lavender"></div>
+  <figcaption>TumorSight Viz 3D segmentation from breast DCE-MRI. Cropped from Fig. 1 of <a href="https://doi.org/10.1038/s41523-024-00696-6">npj Breast Cancer (2024)</a>, © The Authors, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</figcaption>
+</figure>
+<p>I've spent ~5 years at SimBioSys, an early-stage healthcare startup. My work covers medical imaging, computer vision, agentic AI and LLM workflows.</p>
+<p>I have taken models from ideation and prototyping to <strong>FDA clearance</strong> and helped deploy them to production. They include 3D breast MRI segmentation that builds patient-specific digital twins for surgical planning, a 5-year recurrence risk model, and LLM pipelines that turn clinical documents into structured data.</p>
+<p>If you find any of my work interesting, <a href="mailto:gvkannan.work@gmail.com">let's talk</a>.</p>
+<div class="intro-end"></div>
+
+<div class="quick-links">
+  <a href="mailto:gvkannan.work@gmail.com">Email</a><span class="divider">|</span>
+  <a href="https://www.linkedin.com/in/vignesh-kannang/">LinkedIn</a><span class="divider">|</span>
+  <a href="https://github.com/gvkannan-explore">GitHub</a><span class="divider">|</span>
+  <a href="#publications">Publications</a>
 </div>
 
-<main class="col">
+<div class="highlight-card">Models behind <strong>4 FDA 510(k) clearances</strong> · 85% shorter train-to-deploy cycle · segmentation runtime 20 → 3 min</div>
+
+<section id="highlights">
+  <h2 class="section-heading">Highlights</h2>
+  <div class="achievement-list">
+    <div class="achievement-card">
+      <div class="achievement__meta">FDA 510(k) · <a href="https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K231130">#K231130</a> · <a href="https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K243189">#K243189</a> · <a href="https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K251766">#K251766</a></div>
+      <div class="achievement__title">Breast DCE-MRI segmentation</div>
+      <p>3D multi-label models that build patient-specific digital twins for surgical planning.</p>
+    </div>
+    <div class="achievement-card">
+      <div class="achievement__meta">FDA 510(k) · <a href="https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K260023">#K260023</a></div>
+      <div class="achievement__title">5-year recurrence risk model</div>
+      <p>Multimodal survival model combining structured clinical data with imaging features.</p>
+    </div>
+    <div class="achievement-card">
+      <div class="achievement__meta">By the numbers</div>
+      <div class="achievement__title">Delivery and data</div>
+      <ul>
+        <li><strong>10×</strong> annotated training data</li>
+        <li><strong>40%</strong> less manual curation</li>
+        <li><strong>~26</strong> metrics gate each release</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="news">
+  <h2 class="section-heading">In the news</h2>
+  <div class="news-box">
+    <ul>
+      <li><strong>ABC News · GMA</strong>: <a href="https://abcnews.com/GMA/Wellness/40-year-moms-cancer-journey-made-easier-ai/story?id=126682821">40-year-old mom's cancer journey made easier thanks to AI</a>. How AI imaging helped a patient avoid a mastectomy.</li>
+      <li><strong>ABC News</strong>: <a href="https://abcnews.com/video/137283451/">AI tool could help predict breast cancer recurrence</a>. Rebecca Jarvis on a new AI tool for estimating the risk of breast cancer returning.</li>
+      <li><strong>ABC News Live</strong>: <a href="https://www.facebook.com/ABCNewsLive/videos/an-fda-cleared-artificial-intelligence-tool-developed-by-simbiosys-helped-40-yea/819977064324505/">An FDA-cleared AI tool developed by SimBioSys</a> (video on Facebook).</li>
+      <li><strong>WFMJ</strong>: <a href="https://www.youtube.com/watch?v=ZENsz0pHIkQ">A.I. giving surgeons a new view of cancer</a> (video on YouTube).</li>
+    </ul>
+  </div>
+</section>
 
 <section id="experience">
-  <h2>Experience</h2>
-  <div class="roles">
-    <div class="role">
-      <div class="role-head"><h3>Machine Learning Engineer <span>· SimBioSys</span></h3><span class="when">Nov 2021 – Present</span></div>
+  <h2 class="section-heading">Experience</h2>
+  <ul class="entry-list">
+    <li class="entry">
+      <div class="entry__meta">Nov 2021 – Present · SimBioSys</div>
+      <div class="entry__title">Machine Learning Engineer</div>
 
-      <div class="chapters">
-        <nav class="rail" aria-label="Experience areas">
-          <a href="#imaging">Medical imaging</a>
-          <a href="#evaluation">Evaluation &amp; release quality</a>
-          <a href="#llm">LLM &amp; clinical NLP</a>
-          <a href="#mlops">MLOps &amp; delivery</a>
-        </nav>
-        <div class="chapter-list">
-        <section class="chapter" id="imaging">
-          <h4 class="chapter-title">Medical imaging</h4>
+      <h3 class="entry__group">Medical imaging</h3>
       <ul>
         <li>Led design, development and validation of FDA-cleared 3D multi-label segmentation models for breast DCE-MRI that produce patient-specific digital twins of breast tissue and lesions (510(k): <a href="https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K231130">#K231130</a>, <a href="https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K243189">#K243189</a>, <a href="https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K251766">#K251766</a>).</li>
         <li>Cut the second-generation segmentation system's false-negative rate from ~45% to under 10% through model improvements and post-processing updates.</li>
@@ -228,12 +188,11 @@ footer{overflow-wrap:anywhere;border-top:1px solid var(--rule);padding-block:24p
         <li>Benchmarked 3D registration for motion correction across contrast phases: rigid (SimpleITK), learning-based deformable (VoxelMorph) and a locally affine, intensity-aware method (Periaswamy &amp; Farid, 2006).</li>
       </ul>
       <figure class="fig">
-        <div class="frame plan"><img src="assets/img/tumorsight-plan-margins.jpg" alt="TumorSight Plan: 3D breast rendering with two tumors, MRI views of 1 cm surgical margins for unicentric and multicentric cases, and a table of apparent tumor volume at a 1 cm margin in 2D versus 3D"></div>
+        <div class="frame"><img src="assets/img/tumorsight-plan-margins.jpg" alt="TumorSight Plan: 3D breast rendering with two tumors, MRI views of 1 cm surgical margins for unicentric and multicentric cases, and a table of apparent tumor volume at a 1 cm margin in 2D versus 3D"></div>
         <figcaption>TumorSight Plan shows and tabulates the tissue removed at surgical margins adjustable from 0 to 2 cm. Image © SimBioSys, Inc., from <a href="https://simbiosys.com">simbiosys.com</a>.</figcaption>
       </figure>
-        </section>
-        <section class="chapter" id="evaluation">
-          <h4 class="chapter-title">Evaluation &amp; release quality</h4>
+
+      <h3 class="entry__group">Evaluation &amp; release quality</h3>
       <ul>
         <li>Built an automated evaluation suite that scores every major segmentation model iteration on ~26 metrics across 5 categories, offline and online.</li>
         <li>Broke results down by patient cohort, tumor size, nodal status, MRI field strength (1.5T vs 3.0T) and scanner manufacturer.</li>
@@ -242,17 +201,15 @@ footer{overflow-wrap:anywhere;border-top:1px solid var(--rule);padding-block:24p
         <li>Co-authored the test plans for the segmentation and risk models, and wrote CAPA write-ups under an ISO 13485 quality system.</li>
         <li>Turned clinician feedback from 3 sites, relayed through clinical SMEs, into hotfixes shipped in 2 days and a false discovery rate cut from 30% to 11% across 3 releases.</li>
       </ul>
-        </section>
-        <section class="chapter" id="llm">
-          <h4 class="chapter-title">LLM &amp; clinical NLP</h4>
+
+      <h3 class="entry__group">LLM &amp; clinical NLP</h3>
       <ul>
         <li>Designed a multi-document LLM synthesis pipeline that combines clinical reports into structured outputs with ~88% schema compliance and ~75% clinical agreement, now in staging with clinician feedback.</li>
         <li>Built a HIPAA-compliant document-extraction pipeline (OCR + small LLMs) that structured ~3,000 pathology reports and cut manual curation by 40%.</li>
         <li>Built a LangGraph + LangChain agentic pipeline for surgical-planning literature triage with hybrid retrieval and reranking on self-hosted LLMs (Qwen3, MedGemma via vLLM), reaching ~85% expert agreement.</li>
       </ul>
-        </section>
-        <section class="chapter" id="mlops">
-          <h4 class="chapter-title">MLOps &amp; delivery</h4>
+
+      <h3 class="entry__group">MLOps &amp; delivery</h3>
       <ul>
         <li>Built an automated, Git-versioned AWS pipeline (S3, ECR, EC2, Batch) for multi-GPU training, with containerized CI/CD and internal APIs for inference, that cut development and deploy cycles by 85% (2 weeks to 2 days).</li>
         <li>Ran imaging ETL over 5+ TB (~10k patients, 50k+ MRI series) with cron jobs and AWS Batch.</li>
@@ -262,104 +219,103 @@ footer{overflow-wrap:anywhere;border-top:1px solid var(--rule);padding-block:24p
         <li>Served as lead engineer on segmentation, writing design docs that turned product goals into model architecture and data requirements and presenting an executive summary of the improvements at every major release.</li>
         <li>Mentored teammates on AI-assisted development with Cursor and other coding-agent tools.</li>
       </ul>
-        </section>
-        </div>
-      </div>
-      <p class="tools"><b>Tools</b> PyTorch, PyTorch Lightning, MONAI, AWS, Docker, LangGraph, LangChain, Pydantic, vLLM, W&amp;B, Hugging Face, FastAPI</p>
-      <p class="tools"><b>Featured on LinkedIn</b> <a href="https://www.linkedin.com/in/vignesh-kannang/overlay/Position/1883747230/treasury/?profileId=ACoAAB0HULoBV7qjsorENz1v4ssLEOjbSt0RyPM">Work samples for this role</a></p>
-    </div>
+      <div class="entry__meta after"><b>Tools</b> PyTorch, PyTorch Lightning, MONAI, AWS, Docker, LangGraph, LangChain, Pydantic, vLLM, W&amp;B, Hugging Face, FastAPI</div>
+      <div class="entry__meta"><b>Featured on LinkedIn</b> <a href="https://www.linkedin.com/in/vignesh-kannang/overlay/Position/1883747230/treasury/?profileId=ACoAAB0HULoBV7qjsorENz1v4ssLEOjbSt0RyPM">Work samples for this role</a></div>
+    </li>
 
-    <div class="role">
-      <div class="role-head"><h3>Summer Machine Learning Intern <span>· PediaMetrix</span></h3><span class="when">Jul 2021 – Oct 2021</span></div>
+    <li class="entry">
+      <div class="entry__meta">Jul 2021 – Oct 2021 · PediaMetrix</div>
+      <div class="entry__title">Summer Machine Learning Intern</div>
       <ul>
         <li>Developed classification and segmentation models for image-quality estimation in pediatric care.</li>
         <li>Optimized and deployed the classification pipeline to GCP and to edge devices.</li>
       </ul>
-      <p class="tools"><b>Tools</b> PyTorch, TensorFlow, TFX, TF Lite, Keras, GCP, W&amp;B, Optuna</p>
-    </div>
+      <div class="entry__meta after"><b>Tools</b> PyTorch, TensorFlow, TFX, TF Lite, Keras, GCP, W&amp;B, Optuna</div>
+    </li>
 
-    <div class="role">
-      <div class="role-head"><h3>Summer Machine Learning Intern <span>· LumoScan</span></h3><span class="when">Aug 2021 – Sep 2021</span></div>
+    <li class="entry">
+      <div class="entry__meta">Aug 2021 – Sep 2021 · LumoScan</div>
+      <div class="entry__title">Summer Machine Learning Intern</div>
       <ul>
         <li>Fine-tuned deep learning models for skin-lesion detection and classification.</li>
         <li>Built a skin-lesion abnormality detection pipeline and an interactive dashboard for reviewing results.</li>
       </ul>
-    </div>
-  </div>
+    </li>
+  </ul>
 </section>
 
-<section id="news" class="reveal">
-  <h2>In the news</h2>
-  <div class="news">
-    <a href="https://abcnews.com/GMA/Wellness/40-year-moms-cancer-journey-made-easier-ai/story?id=126682821"><span class="src">ABC News · GMA</span><b>40-year-old mom's cancer journey made easier thanks to AI</b><small>How AI imaging helped a patient avoid a mastectomy.</small></a>
-    <a href="https://abcnews.com/video/137283451/"><span class="src">ABC News</span><b>AI tool could help predict breast cancer recurrence</b><small>Rebecca Jarvis on a new AI tool for estimating the risk of breast cancer returning.</small></a>
-    <a href="https://www.facebook.com/ABCNewsLive/videos/an-fda-cleared-artificial-intelligence-tool-developed-by-simbiosys-helped-40-yea/819977064324505/"><span class="src">ABC News Live</span><b>An FDA-cleared AI tool developed by SimBioSys</b><small>Video on Facebook.</small></a>
-    <a href="https://www.youtube.com/watch?v=ZENsz0pHIkQ"><span class="src">WFMJ</span><b>A.I. giving surgeons a new view of cancer</b><small>Video on YouTube.</small></a>
-  </div>
+<section id="projects">
+  <h2 class="section-heading">Projects</h2>
+  <ol class="pub-list">
+    <li class="pub-item">
+      <span class="pub-title"><a href="https://github.com/gvkannan-explore/rag-project">PubMed RAG with citation checks</a></span><span class="badge">In progress</span>
+      <ul>
+        <li>Answers questions over a frozen set of 200 breast-cancer PubMed abstracts from a command-line tool.</li>
+        <li>Compares four retrieval setups on the same questions: dense (pgvector), BM25, hybrid with reciprocal rank fusion, and hybrid plus a MiniLM cross-encoder reranker.</li>
+        <li>Requires every generated claim to cite a PMID and quote that abstract word for word, and drops claims that fail without another model call.</li>
+        <li>Runs secret scanning, Ruff, Pyright and offline pytest checks before every push.</li>
+      </ul>
+      <div class="pub-meta">Postgres + pgvector · rank_bm25 · Sentence Transformers · Pydantic · pytest, Ruff, Pyright</div>
+    </li>
+    <li class="pub-item">
+      <span class="pub-title"><a href="https://github.com/gvkannan-explore/MultiLabel_N24/blob/t3/execute-a0-brownfield/plans/Skill-Based%20SDLC%20Brownfield%20Pilot.md">Skill-based SDLC vs. plain AI-assisted coding</a></span><span class="badge">In progress</span>
+      <ul>
+        <li>Tests whether a targeted set of agent skills changes what a coding agent does in an existing codebase, running each task with skills on and off.</li>
+        <li>In the first task, the agent adds ModernBERT and then UltraBERT as encoders to a frozen RoBERTa news classifier.</li>
+        <li>In the second task, the agent finds and fixes seeded CVEs and cites the advisories.</li>
+        <li>Scores each run against a private rubric: broken contracts, duplicated code, "done" claimed without running CI, and invented advisories.</li>
+        <li>Records CI results, diff size, tokens and wall-clock time for every run.</li>
+      </ul>
+      <div class="pub-meta">Codex agent skills adapted from Matt Pocock's and poteto's sets · pytest CI · uv · OSV advisories</div>
+    </li>
+    <li class="pub-item">
+      <span class="pub-title"><a href="https://github.com/gvkannan-explore/MultiLabel_N24">News classification: fine-tuning vs. prompting</a></span><span class="badge done">Completed</span>
+      <ul>
+        <li>Fine-tunes RoBERTa for N24News category classification.</li>
+        <li>Benchmarks it against zero-shot, decoder-only LLMs served through vLLM.</li>
+        <li>Measures when fine-tuning beats prompting.</li>
+      </ul>
+      <div class="pub-meta">PyTorch · Hugging Face Transformers · vLLM</div>
+    </li>
+  </ol>
 </section>
 
-<section id="projects" class="reveal">
-  <h2>Projects</h2>
-  <div class="item">
-    <h3><a href="https://github.com/gvkannan-explore/rag-project">PubMed RAG with citation checks</a><span class="tag">In progress</span></h3>
-    <ul>
-      <li>Answers questions over a frozen set of 200 breast-cancer PubMed abstracts from a command-line tool.</li>
-      <li>Compares four retrieval setups on the same questions: dense (pgvector), BM25, hybrid with reciprocal rank fusion, and hybrid plus a MiniLM cross-encoder reranker.</li>
-      <li>Requires every generated claim to cite a PMID and quote that abstract word for word, and drops claims that fail without another model call.</li>
-      <li>Runs secret scanning, Ruff, Pyright and offline pytest checks before every push.</li>
-    </ul>
-    <p class="meta">Postgres + pgvector · rank_bm25 · Sentence Transformers · Pydantic · pytest, Ruff, Pyright</p>
-  </div>
-  <div class="item">
-    <h3><a href="https://github.com/gvkannan-explore/MultiLabel_N24/blob/t3/execute-a0-brownfield/plans/Skill-Based%20SDLC%20Brownfield%20Pilot.md">Skill-based SDLC vs. plain AI-assisted coding</a><span class="tag">In progress</span></h3>
-    <ul>
-      <li>Tests whether a targeted set of agent skills changes what a coding agent does in an existing codebase, running each task with skills on and off.</li>
-      <li>In the first task, the agent adds ModernBERT and then UltraBERT as encoders to a frozen RoBERTa news classifier.</li>
-      <li>In the second task, the agent finds and fixes seeded CVEs and cites the advisories.</li>
-      <li>Scores each run against a private rubric: broken contracts, duplicated code, "done" claimed without running CI, and invented advisories.</li>
-      <li>Records CI results, diff size, tokens and wall-clock time for every run.</li>
-    </ul>
-    <p class="meta">Codex agent skills adapted from Matt Pocock's and poteto's sets · pytest CI · uv · OSV advisories</p>
-  </div>
-  <div class="item">
-    <h3><a href="https://github.com/gvkannan-explore/MultiLabel_N24">News classification: fine-tuning vs. prompting</a><span class="tag">Completed</span></h3>
-    <ul>
-      <li>Fine-tunes RoBERTa for N24News category classification.</li>
-      <li>Benchmarks it against zero-shot, decoder-only LLMs served through vLLM.</li>
-      <li>Measures when fine-tuning beats prompting.</li>
-    </ul>
-    <p class="meta">PyTorch · Hugging Face Transformers · vLLM</p>
-  </div>
+<section id="publications">
+  <h2 class="section-heading">Publications</h2>
+  <ol class="pub-list">
+    <li class="pub-item">
+      <span class="pub-title">Performance of an AI-powered visualization software platform for precision surgery in breast cancer patients</span><br>
+      <em>npj Breast Cancer, 2024</em>.<br>
+      <a href="https://doi.org/10.1038/s41523-024-00696-6">Paper</a>
+      <figure class="fig">
+        <div class="frame"><img src="assets/img/npj-breast-cancer-2024-fig1.jpg" alt="TumorSight Viz workflow: DCE-MRI, AI-assisted annotation, 3D segmentation, automated tumor-to-chest, skin and nipple measurements, and convex hulls for multicentric and unicentric disease"></div>
+        <figcaption>TumorSight Viz workflow: from DCE-MRI through AI-assisted annotation to 3D segmentation, automated distance measurements and convex hulls. Fig. 1 from <a href="https://www.nature.com/articles/s41523-024-00696-6/figures/1">the npj Breast Cancer paper</a>, © The Authors, licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</figcaption>
+      </figure>
+    </li>
+    <li class="pub-item">
+      <span class="pub-title">Seeing beyond cancer: multi-institutional validation of object localization and 3D semantic segmentation using deep learning for breast MRI</span><br>
+      <em>SPIE Medical Imaging, 2024</em>.<br>
+      <a href="https://journals.spiedigitallibrary.org/conference-proceedings-of-spie/12927/129270H/Seeing-beyond-cancer--multi-institutional-validation-of-object-localization/10.1117/12.3009341.short">Paper</a> | <a href="https://arxiv.org/abs/2311.16213">arXiv</a>
+    </li>
+  </ol>
 </section>
 
-<section id="publications" class="reveal">
-  <h2>Publications</h2>
-  <div class="item">
-    <h3>Performance of an AI-powered visualization software platform for precision surgery in breast cancer patients</h3>
-    <p class="meta">npj Breast Cancer, 2024 · <a href="https://doi.org/10.1038/s41523-024-00696-6">Paper</a></p>
-  </div>
-  <figure class="fig">
-    <div class="frame">
-      <img src="assets/img/npj-breast-cancer-2024-fig1.jpg" alt="TumorSight Viz workflow: DCE-MRI, AI-assisted annotation, 3D segmentation, automated tumor-to-chest, skin and nipple measurements, and convex hulls for multicentric and unicentric disease">
-    </div>
-    <figcaption>TumorSight Viz workflow: from DCE-MRI through AI-assisted annotation to 3D segmentation, automated distance measurements and convex hulls. Fig. 1 from <a href="https://www.nature.com/articles/s41523-024-00696-6/figures/1">the npj Breast Cancer paper</a>, © The Authors, licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</figcaption>
-  </figure>
-  <div class="item">
-    <h3>Seeing beyond cancer: multi-institutional validation of object localization and 3D semantic segmentation using deep learning for breast MRI</h3>
-    <p class="meta">SPIE Medical Imaging, 2024 · <a href="https://journals.spiedigitallibrary.org/conference-proceedings-of-spie/12927/129270H/Seeing-beyond-cancer--multi-institutional-validation-of-object-localization/10.1117/12.3009341.short">Paper</a> · <a href="https://arxiv.org/abs/2311.16213">arXiv</a></p>
-  </div>
+<section id="education">
+  <h2 class="section-heading">Education</h2>
+  <ul class="entry-list">
+    <li class="entry">
+      <div class="entry__meta">2019 – 2021 · WPI</div>
+      <div class="entry__title">M.S., Robotics Engineering</div>
+    </li>
+    <li class="entry">
+      <div class="entry__meta">2015 – 2019 · NIT Tiruchirappalli</div>
+      <div class="entry__title">B.Tech., Mechanical Engineering</div>
+    </li>
+  </ul>
 </section>
 
-<section id="education" class="reveal">
-  <h2>Education</h2>
-  <div class="edu">
-    <div class="role-head"><h3>M.S., Robotics Engineering <span>· WPI</span></h3><span class="when">2019 – 2021</span></div>
-    <div class="role-head"><h3>B.Tech., Mechanical Engineering <span>· NIT Tiruchirappalli</span></h3><span class="when">2015 – 2019</span></div>
-  </div>
-</section>
-
-<section id="skills" class="reveal">
-  <h2>Skills</h2>
+<section id="skills">
+  <h2 class="section-heading">Skills</h2>
   <dl class="skills">
     <dt>Languages</dt><dd>Python, SQL</dd>
     <dt>ML &amp; imaging</dt><dd>PyTorch, PyTorch Lightning (DDP), DeepSpeed, MONAI, scikit-learn, SimpleITK, VoxelMorph, DICOM / NIfTI</dd>
@@ -372,35 +328,8 @@ footer{overflow-wrap:anywhere;border-top:1px solid var(--rule);padding-block:24p
 
 <footer class="col">
   <a href="mailto:gvkannan.work@gmail.com">Email</a>
-  <span>Color palette: <a href="https://www.media.io/color-palette/green-navy-blue-color-palette.html">Green Navy Blue by media.io</a> · Last updated November 2026</span>
+  <span>Last updated November 2026</span>
 </footer>
-<script>
-(function(){
-  var root=document.documentElement;
-  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if(!reduce&&'IntersectionObserver' in window){
-    root.classList.add('reveal-ready');
-    document.querySelectorAll('.chapter').forEach(function(ch){
-      ch.querySelectorAll('li, .fig').forEach(function(el,i){el.style.setProperty('--i',i)});
-    });
-    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -12% 0px',threshold:0.12});
-    document.querySelectorAll('.chapter, .reveal').forEach(function(el){io.observe(el)});
-  }
-  var rail=document.querySelector('.rail'), wrap=document.querySelector('.chapters');
-  if(!rail||!wrap)return;
-  var links=[].slice.call(rail.querySelectorAll('a'));
-  function update(){
-    var r=wrap.getBoundingClientRect(), vh=window.innerHeight;
-    var p=Math.min(1,Math.max(0,(vh*0.5-r.top)/r.height));
-    rail.style.setProperty('--p',p.toFixed(3));
-    var current=null;
-    links.forEach(function(a){var t=document.getElementById(a.hash.slice(1)); if(t&&t.getBoundingClientRect().top<vh*0.5)current=a});
-    links.forEach(function(a){a.classList.toggle('on',a===current)});
-  }
-  window.addEventListener('scroll',update,{passive:true}); window.addEventListener('resize',update); update();
-})();
-</script>
-
 
 </body>
 </html>
