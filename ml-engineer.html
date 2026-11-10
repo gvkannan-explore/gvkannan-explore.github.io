@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Machine Learning Engineer, SimBioSys · Vignesh Kannan</title>
+<meta name="description" content="Vignesh Kannan's work as a machine learning engineer at SimBioSys: medical imaging, evaluation, clinical LLM pipelines and MLOps.">
+<meta property="og:title" content="Machine Learning Engineer, SimBioSys · Vignesh Kannan">
+<meta property="og:description" content="Vignesh Kannan's work as a machine learning engineer at SimBioSys: medical imaging, evaluation, clinical LLM pipelines and MLOps.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://gvkannan-explore.github.io/ml-engineer.html">
+<meta property="og:image" content="https://gvkannan-explore.github.io/assets/img/og-card.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<div class="page">
+
+<aside class="sidebar">
+<div class="who">
+<a class="hl name" href="index.html">Vignesh Kannan</a>
+<p>ML Engineer · AI Engineer · Chicago</p>
+</div>
+<p class="tagline">Medical imaging, computer vision, clinical LLM pipelines and MLOps.</p>
+<nav class="site-nav" aria-label="Site">
+<a class="hl" href="index.html#experience">Experience</a>
+<a class="hl" href="index.html#projects">Projects</a>
+<a class="hl" href="index.html#news">In the news</a>
+<a class="hl" href="index.html#publications">Publications</a>
+<a class="hl" href="index.html#education">Education</a>
+</nav>
+<div class="contacts">
+<a href="mailto:gvkannan.work@gmail.com">Email</a>
+<a href="https://www.linkedin.com/in/vignesh-kannang/">LinkedIn</a>
+<a href="https://github.com/gvkannan-explore">GitHub</a>
+</div>
+</aside>
+
+<main class="role-page">
+
+<a class="hl back" href="index.html">← Home</a>
+
+<header class="role-head">
+<h2 class="kicker">Experience</h2>
+<h1>Machine Learning Engineer</h1>
+<p>SimBioSys · <span class="date">Nov 2021 – present</span></p>
+</header>
+
+<section class="group">
+<h3>Medical imaging</h3>
+<ul class="bullets">
+<li>Led design, development and validation of FDA-cleared 3D multi-label segmentation models for breast DCE-MRI that produce patient-specific digital twins of breast tissue and lesions (510(k): <a href="https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K231130">#K231130</a>, <a href="https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K243189">#K243189</a>, <a href="https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K251766">#K251766</a>).</li>
+<li>Co-led an FDA-cleared multimodal survival model combining structured clinical data with imaging features to predict 5-year recurrence risk (510(k): <a href="https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K260023">#K260023</a>).</li>
+<li>Cut the second-generation segmentation system's false-negative rate from ~45% to under 10% through model improvements and post-processing updates.</li>
+<li>Cut per-case segmentation runtime from 20 minutes to about 3 minutes by replacing a five-model ensemble with one model calibrated for breast MRI, choosing GPUs and adding bfloat16, TorchScript and leaner preprocessing.</li>
+<li>Co-developed MRI foundation models using Swin-UNETR, pretrained self-supervised on ~10k patients with DeepSpeed, that raised downstream benchmark performance by 10% without new annotation.</li>
+</ul>
+<figure class="fig"><img src="assets/img/tumorsight-plan-margins.jpg" alt="TumorSight Plan: 3D breast rendering with two tumors, MRI views of 1 cm surgical margins for unicentric and multicentric cases, and a table of apparent tumor volume at a 1 cm margin in 2D versus 3D" width="1240" height="805"><figcaption>TumorSight Plan shows and tabulates the tissue removed at surgical margins adjustable from 0 to 2 cm. Image © SimBioSys, Inc., from <a href="https://simbiosys.com">simbiosys.com</a>.</figcaption></figure>
+</section>
+
+<section class="group">
+<h3>LLM &amp; clinical NLP</h3>
+<ul class="bullets">
+<li>Built and deployed internally a HIPAA-compliant document-extraction pipeline (OCR + small LLMs) that structured ~3,000 pathology reports, including nodal status, and cut manual curation by 40%.</li>
+<li>Designed a multi-document LLM synthesis pipeline that combines clinical reports into structured outputs with ~88% schema compliance and ~75% clinical agreement, staged for testing with stakeholders and clinical SMEs.</li>
+<li>Built a LangGraph + LangChain agentic pipeline for surgical-planning literature triage with hybrid retrieval and reranking on self-hosted LLMs (Qwen3, MedGemma via vLLM), reaching ~85% expert agreement.</li>
+</ul>
+</section>
+
+<section class="group">
+<h3>Evaluation &amp; release quality</h3>
+<ul class="bullets">
+<li>Built an automated evaluation suite that scores every major segmentation model iteration on ~26 metrics across 5 categories, offline and online, broken down by patient cohort, tumor size, MRI field strength (1.5T vs 3.0T) and scanner manufacturer, checking all of them for regressions and gating releases on a prioritized subset.</li>
+<li>Turned clinician feedback from 3 sites, relayed through clinical SMEs, into hotfixes shipped in 2 days and a version-3 post-processing release that cut the false discovery rate from 30% to under 10%.</li>
+<li>Gated every release tag on end-to-end pytest model-performance tests, then reviewed models in a staging environment before production.</li>
+<li>Co-authored the test plans for the segmentation and risk models, and wrote CAPA write-ups under an ISO 13485 quality system.</li>
+</ul>
+</section>
+
+<section class="group">
+<h3>MLOps &amp; delivery</h3>
+<ul class="bullets">
+<li>Built an automated, Git-versioned AWS pipeline (S3, ECR, EC2, Batch) for multi-GPU training, with containerized CI/CD and internal APIs for inference, that cut development and deploy cycles by 85% (2 weeks to 2 days).</li>
+<li>Served as lead engineer on segmentation, writing design docs that turned product goals into model architecture and data requirements and presenting an executive summary of the improvements at every major release.</li>
+<li>Ran imaging ETL over 5+ TB (~10k patients, 50k+ MRI series) with cron jobs and AWS Batch.</li>
+<li>Coordinated external vendors and internal teams to run an FDA-compliant annotation pipeline that scaled training and validation data 10× with model-assisted pre-labels from in-house segmentation models and standardized QA protocols.</li>
+<li>Managed AWS infrastructure for the ML and data science team, including IAM and storage, moving cold data to Glacier and cutting storage from 10 TiB to 1.5 TiB, and reported on it at monthly team reviews.</li>
+<li>Mentored teammates on 3D Slicer, the AWS retraining pipeline, and AI-assisted development with Cursor and other coding agents.</li>
+</ul>
+</section>
+
+<p class="tools"><b>Tools</b> PyTorch, PyTorch Lightning, MONAI, AWS, Docker, LangGraph, LangChain, Pydantic, vLLM, W&amp;B, Hugging Face, FastAPI</p>
+
+<footer class="foot">
+<div class="contacts">
+<a href="mailto:gvkannan.work@gmail.com">Email</a>
+<a href="https://www.linkedin.com/in/vignesh-kannang/">LinkedIn</a>
+<a href="https://github.com/gvkannan-explore">GitHub</a>
+</div>
+<p class="credit">Color palette: <a href="https://www.media.io/color-palette/green-navy-blue-color-palette.html">Green Navy Blue by media.io</a> · Last updated November 2026</p>
+</footer>
+
+</main>
+</div>
+</body>
+</html>

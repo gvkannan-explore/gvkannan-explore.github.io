@@ -6,331 +6,130 @@
 <title>Vignesh Kannan · AI/ML Engineer</title>
 <meta name="description" content="AI/ML engineer who has taken medical imaging models from prototype to FDA clearance and production, and built clinical LLM pipelines deployed internally.">
 <meta property="og:title" content="Vignesh Kannan · AI/ML Engineer">
-<meta property="og:description" content="Medical imaging, computer vision, agentic AI and LLM workflows. Models behind four FDA 510(k) clearances.">
-<style>
-/* Style follows the academicpages homepage of RikiyaT.github.io: white page, thin masthead,
-   system sans-serif, blue links, section headings with a fading rule, cards with soft gradients. */
-html{-webkit-text-size-adjust:100%;scrollbar-gutter:stable;background:#fff}
-body{margin:0;background:#fff;color:#222;font:16px/1.65 -apple-system,".SFNSText-Regular","San Francisco",Roboto,"Segoe UI","Helvetica Neue",Arial,sans-serif}
-img{max-width:100%;height:auto}
-p,li,dd,dt,figcaption,h1,h2,h3,h4{overflow-wrap:break-word}
-.quick-links>*,.achievement-list>*,.skills>*,.masthead-in>*{min-width:0}
-a{color:#598BE7;text-decoration:none}
-a:hover,a:focus{text-decoration:underline}
-a:focus-visible{outline:2px solid #598BE7;outline-offset:2px;border-radius:3px}
-h1,h2,h3,h4{text-wrap:balance}
-.col{max-width:800px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
-
-/* masthead */
-.masthead{background:#fff;border-bottom:1px solid #f2f3f3;z-index:10}
-@media (min-height:520px){.masthead{position:sticky;top:0}}
-.masthead-in{max-width:1000px;margin:0 auto;padding:12px max(20px,env(safe-area-inset-right,0px)) 12px max(20px,env(safe-area-inset-left,0px));display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 22px;font-size:.95rem}
-.masthead a{color:#7a8288;min-height:32px;display:inline-flex;align-items:center}
-.masthead a:hover{color:#494e52;text-decoration:none}
-.masthead .site-title{color:#222;font-weight:700;font-size:1.1rem;margin-right:8px}
-section[id]{scroll-margin-top:72px}
-@media (max-width:520px){section[id]{scroll-margin-top:110px}}
-
-/* page */
-main{padding-block:12px 40px;font-size:.95rem;line-height:1.65}
-.hero-title{font-size:2rem;line-height:1.2;margin:1.1rem 0 .3rem}
-.hero-subtitle{color:#6c7380;font-size:.98rem;font-weight:600;margin:0 0 .9rem}
-.about-photo{float:right;width:clamp(220px,32vw,300px);margin:6px 0 12px 22px}
-.about-photo .frame{aspect-ratio:726/600;border-radius:10px;overflow:hidden;background:#000;box-shadow:0 10px 24px rgba(0,0,0,.12)}
-.about-photo img{width:100%;height:100%;object-fit:contain;display:block}
-.about-photo figcaption{font-size:.75rem;line-height:1.45;color:#9aa3b5;margin-top:6px}
-.about-photo figcaption a{color:#9aa3b5;text-decoration:underline}
-@media (max-width:700px){.about-photo{float:none;margin:8px auto 16px;max-width:300px}}
-main p{margin:0 0 .9rem}
-.intro-end{clear:both}
-.quick-links{margin:.4em 0 1em;font-size:.92rem;color:#4b4b4b;text-align:center}
-.quick-links .divider{color:#b0b7c3;margin:0 .35em}
-.highlight-card{background:linear-gradient(135deg,#f3f6ff 0%,#eaf0ff 100%);border:1px solid #d7e2ff;padding:14px 16px;border-radius:12px;box-shadow:0 8px 18px rgba(0,0,0,.08);margin:14px 0 18px;text-align:center;font-weight:500}
-
-.section-heading{font-size:1.32rem;letter-spacing:.01em;font-weight:700;margin:1.4em 0 .6em;display:flex;align-items:center;gap:.5rem}
-.section-heading::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,rgba(89,139,231,.35),rgba(89,139,231,0))}
-
-/* highlights */
-.achievement-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:.9rem;margin:0 0 1.3rem}
-.achievement-card{background:linear-gradient(135deg,#fcfdff 0%,#f3f7ff 100%);border:1px solid #dfe7f8;border-radius:12px;box-shadow:0 8px 18px rgba(0,0,0,.06);padding:.95rem 1rem}
-.achievement__meta{font-size:.8rem;color:#6c7380;letter-spacing:.04em;text-transform:uppercase;margin-bottom:.28rem}
-.achievement__title{font-size:1rem;font-weight:700}
-.achievement-card p{margin:.32rem 0 0}
-.achievement-card ul{margin:.32rem 0 0;padding-left:1.2rem}
-
-/* news */
-.news-box{max-height:260px;overflow-y:auto;padding:2px 0;margin-bottom:18px}
-.news-box ul{list-style:disc;padding-left:1.5rem;margin:.5rem 0}
-.news-box li{margin-bottom:.35rem}
-
-/* experience, education */
-.entry-list{list-style:none;padding:0;margin:0}
-.entry{padding:.75rem 0}
-.entry__meta{font-size:.88rem;color:#6c7380;margin-bottom:.25rem;font-variant-numeric:tabular-nums}
-.entry__title{font-weight:700}
-.entry__group{font-size:.95rem;font-weight:700;color:#4b4b4b;margin:1.1rem 0 .3rem}
-.entry ul,.pub-item ul{margin:.3rem 0 .4rem;padding-left:1.4rem;list-style:disc}
-.entry li,.pub-item li{margin-bottom:.3rem}
-.entry .entry__meta.after{margin-top:.5rem}
-.entry .entry__meta.after b{font-weight:600;color:#4b4b4b}
-
-/* figures */
-.fig{margin:.9rem 0 1rem}
-.fig .frame{border-radius:10px;overflow:hidden;border:1px solid #e5e8f3;background:#fff;box-shadow:0 8px 18px rgba(0,0,0,.06)}
-.fig img{width:100%;display:block}
-.fig figcaption{font-size:.82rem;color:#6c7380;line-height:1.5;margin-top:.5rem}
-
-/* projects, publications */
-.pub-list{list-style:none;padding:0;margin:0}
-.pub-item{padding:0 0 1rem;margin-bottom:1rem;border-bottom:1px solid #e8ebf3}
-.pub-item:last-child{border-bottom:none;margin-bottom:.2rem;padding-bottom:.2rem}
-.pub-title{font-size:1.05rem;font-weight:700}
-.badge{display:inline-block;margin:.18rem 0 .3rem .3rem;padding:.12rem .6rem;border-radius:999px;font-size:.78rem;font-weight:700;letter-spacing:.01em;color:#8a4800;background:#fff2cd;border:1px solid #ffd487;vertical-align:middle}
-.badge.done{color:#1f6b3a;background:#e3f6e9;border-color:#a9dfbb}
-.pub-meta{font-size:.88rem;color:#6c7380}
-
-/* skills */
-.skills{display:grid;grid-template-columns:minmax(0,max-content) minmax(0,1fr);gap:8px 18px;margin:0}
-.skills dt{font-weight:600;color:#6c7380}
-.skills dd{margin:0}
-@media (max-width:520px){.skills{grid-template-columns:1fr;gap:2px}.skills dd{margin-bottom:10px}}
-
-footer{border-top:1px solid #f2f3f3;padding-block:20px 36px;font-size:.85rem;color:#9aa3b5;display:flex;flex-wrap:wrap;justify-content:center;gap:6px 14px;text-align:center}
-</style>
+<meta property="og:description" content="AI/ML engineer who has taken medical imaging models from prototype to FDA clearance and production, and built clinical LLM pipelines deployed internally.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://gvkannan-explore.github.io/">
+<meta property="og:image" content="https://gvkannan-explore.github.io/assets/img/og-card.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
+<link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
+<div class="page">
 
-<header class="masthead">
-  <nav class="masthead-in" aria-label="Site">
-    <a class="site-title" href="#top">Vignesh Kannan</a>
-    <a href="#highlights">Highlights</a>
-    <a href="#experience">Experience</a>
-    <a href="#projects">Projects</a>
-    <a href="#publications">Publications</a>
-    <a href="#skills">Skills</a>
-  </nav>
-</header>
-
-<main class="col" id="top">
-
-<h1 class="hero-title">Vignesh Kannan</h1>
-<div class="hero-subtitle">Medical imaging · Computer vision · LLM &amp; agentic AI · MLOps</div>
-<figure class="about-photo">
-  <div class="frame"><img src="assets/img/tumorsight-viz-3d.jpg" alt="3D rendering of both breasts from a DCE-MRI scan, with two tumors in blue, blood vessels in red and breast tissue in lavender"></div>
-  <figcaption>TumorSight Viz 3D segmentation from breast DCE-MRI. Cropped from Fig. 1 of <a href="https://doi.org/10.1038/s41523-024-00696-6">npj Breast Cancer (2024)</a>, © The Authors, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</figcaption>
-</figure>
-<p>I've spent ~5 years at SimBioSys, an early-stage healthcare startup. My work covers medical imaging, computer vision, agentic AI and LLM workflows.</p>
-<p>I have taken models from ideation and prototyping to <strong>FDA clearance</strong> and helped deploy them to production. They include 3D breast MRI segmentation that builds patient-specific digital twins for surgical planning and a 5-year recurrence risk model. I have also built LLM pipelines, deployed internally, that turn clinical documents into structured data.</p>
-<p>If you find any of my work interesting, <a href="mailto:gvkannan.work@gmail.com">let's talk</a>.</p>
-<div class="intro-end"></div>
-
-<div class="quick-links">
-  <a href="mailto:gvkannan.work@gmail.com">Email</a><span class="divider">|</span>
-  <a href="https://www.linkedin.com/in/vignesh-kannang/">LinkedIn</a><span class="divider">|</span>
-  <a href="https://github.com/gvkannan-explore">GitHub</a><span class="divider">|</span>
-  <a href="#publications">Publications</a>
+<aside class="sidebar">
+<div class="who">
+<h1 class="name">Vignesh Kannan</h1>
+<p>ML Engineer · AI Engineer · Chicago</p>
 </div>
+<p class="tagline">Medical imaging, computer vision, clinical LLM pipelines and MLOps.</p>
+<nav class="site-nav" aria-label="Site">
+<a class="hl" href="#experience">Experience</a>
+<a class="hl" href="#projects">Projects</a>
+<a class="hl" href="#news">In the news</a>
+<a class="hl" href="#publications">Publications</a>
+<a class="hl" href="#education">Education</a>
+</nav>
+<div class="contacts">
+<a href="mailto:gvkannan.work@gmail.com">Email</a>
+<a href="https://www.linkedin.com/in/vignesh-kannang/">LinkedIn</a>
+<a href="https://github.com/gvkannan-explore">GitHub</a>
+</div>
+</aside>
 
-<div class="highlight-card">Models behind <strong>4 FDA 510(k) clearances</strong> · 85% shorter train-to-deploy cycle · segmentation runtime 20 → 3 min</div>
+<main>
 
-<section id="highlights">
-  <h2 class="section-heading">Highlights</h2>
-  <div class="achievement-list">
-    <div class="achievement-card">
-      <div class="achievement__meta">FDA 510(k) · <a href="https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K231130">#K231130</a> · <a href="https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K243189">#K243189</a> · <a href="https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K251766">#K251766</a></div>
-      <div class="achievement__title">Breast DCE-MRI segmentation</div>
-      <p>3D multi-label models that build patient-specific digital twins for surgical planning.</p>
-    </div>
-    <div class="achievement-card">
-      <div class="achievement__meta">FDA 510(k) · <a href="https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K260023">#K260023</a></div>
-      <div class="achievement__title">5-year recurrence risk model</div>
-      <p>Multimodal survival model combining structured clinical data with imaging features.</p>
-    </div>
-    <div class="achievement-card">
-      <div class="achievement__meta">By the numbers</div>
-      <div class="achievement__title">Delivery and data</div>
-      <ul>
-        <li><strong>10×</strong> annotated training data</li>
-        <li><strong>40%</strong> less manual curation</li>
-        <li><strong>~26</strong> metrics checked each release</li>
-      </ul>
-    </div>
-  </div>
+<section class="intro">
+<div class="intro-text">
+<p>I have taken models from ideation and prototyping to <strong>FDA clearance</strong> and helped deploy them to production. They include 3D breast MRI segmentation that builds patient-specific digital twins for surgical planning and a 5-year recurrence risk model.</p>
+<p>I have also built LLM pipelines, deployed internally, that turn clinical documents into structured data. If you find any of my work interesting, <a href="mailto:gvkannan.work@gmail.com">let's talk</a>.</p>
+</div>
+<figure>
+<div class="frame"><img src="assets/img/tumorsight-viz-3d.jpg" width="726" height="600" alt="3D rendering of both breasts from a DCE-MRI scan, with two tumors in blue, blood vessels in red and breast tissue in lavender"></div>
+<figcaption>TumorSight Viz 3D segmentation from breast DCE-MRI. Cropped from Fig. 1 of <a href="https://doi.org/10.1038/s41523-024-00696-6">npj Breast Cancer (2024)</a>, © The Authors, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</figcaption>
+</figure>
 </section>
 
-<section id="news">
-  <h2 class="section-heading">In the news</h2>
-  <div class="news-box">
-    <ul>
-      <li><strong>ABC News · GMA</strong>: <a href="https://abcnews.com/GMA/Wellness/40-year-moms-cancer-journey-made-easier-ai/story?id=126682821">40-year-old mom's cancer journey made easier thanks to AI</a>. How AI imaging helped a patient avoid a mastectomy.</li>
-      <li><strong>ABC News</strong>: <a href="https://abcnews.com/video/137283451/">AI tool could help predict breast cancer recurrence</a>. Rebecca Jarvis on a new AI tool for estimating the risk of breast cancer returning.</li>
-      <li><strong>ABC News Live</strong>: <a href="https://www.facebook.com/ABCNewsLive/videos/an-fda-cleared-artificial-intelligence-tool-developed-by-simbiosys-helped-40-yea/819977064324505/">An FDA-cleared AI tool developed by SimBioSys</a> (video on Facebook).</li>
-      <li><strong>WFMJ</strong>: <a href="https://www.youtube.com/watch?v=ZENsz0pHIkQ">A.I. giving surgeons a new view of cancer</a> (video on YouTube).</li>
-    </ul>
-  </div>
+<section>
+<h2 class="kicker">By the numbers</h2>
+<dl class="stats">
+<div><dt>4</dt><dd>FDA 510(k) clearances</dd></div>
+<div><dt>2 weeks → 2 days</dt><dd>train-to-deploy cycle</dd></div>
+<div><dt>10×</dt><dd>annotated training data</dd></div>
+<div><dt>40%</dt><dd>less manual curation</dd></div>
+<div><dt>~26</dt><dd>metrics checked each release</dd></div>
+<div><dt>5+ hospitals</dt><dd>run the models, ~3k studies</dd></div>
+</dl>
 </section>
 
 <section id="experience">
-  <h2 class="section-heading">Experience</h2>
-  <ul class="entry-list">
-    <li class="entry">
-      <div class="entry__meta">Nov 2021 – Present · SimBioSys</div>
-      <div class="entry__title">Machine Learning Engineer</div>
-
-      <h3 class="entry__group">Medical imaging</h3>
-      <ul>
-        <li>Led design, development and validation of FDA-cleared 3D multi-label segmentation models for breast DCE-MRI that produce patient-specific digital twins of breast tissue and lesions (510(k): <a href="https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K231130">#K231130</a>, <a href="https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K243189">#K243189</a>, <a href="https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K251766">#K251766</a>).</li>
-        <li>Cut the second-generation segmentation system's false-negative rate from ~45% to under 10% through model improvements and post-processing updates.</li>
-        <li>Cut per-case segmentation runtime from 20 minutes to about 3 minutes by replacing a five-model ensemble with one model calibrated for breast MRI, choosing GPUs and adding bfloat16, TorchScript and leaner preprocessing.</li>
-        <li>Co-developed MRI foundation models using Swin-UNETR, pretrained self-supervised on ~10k patients with DeepSpeed, that raised downstream benchmark performance by 10% without new annotation.</li>
-        <li>Co-led an FDA-cleared multimodal survival model combining structured clinical data with imaging features to predict 5-year recurrence risk (510(k): <a href="https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K260023">#K260023</a>).</li>
-        <li>Contributed to verification and validation of the multimodal risk model by writing tests that checked it met accuracy standards and gave repeatable, reproducible predictions within the expected tolerance.</li>
-        <li>Benchmarked 3D registration for motion correction across contrast phases: rigid (SimpleITK), learning-based deformable (VoxelMorph) and a locally affine, intensity-aware method (Periaswamy &amp; Farid, 2006).</li>
-      </ul>
-      <figure class="fig">
-        <div class="frame"><img src="assets/img/tumorsight-plan-margins.jpg" alt="TumorSight Plan: 3D breast rendering with two tumors, MRI views of 1 cm surgical margins for unicentric and multicentric cases, and a table of apparent tumor volume at a 1 cm margin in 2D versus 3D"></div>
-        <figcaption>TumorSight Plan shows and tabulates the tissue removed at surgical margins adjustable from 0 to 2 cm. Image © SimBioSys, Inc., from <a href="https://simbiosys.com">simbiosys.com</a>.</figcaption>
-      </figure>
-
-      <h3 class="entry__group">Evaluation &amp; release quality</h3>
-      <ul>
-        <li>Built an automated evaluation suite that scores every major segmentation model iteration on ~26 metrics across 5 categories, offline and online, checking all of them for regressions and gating releases on a prioritized subset.</li>
-        <li>Broke results down by patient cohort, tumor size, MRI field strength (1.5T vs 3.0T) and scanner manufacturer.</li>
-        <li>Paired the metric suite with manual review by an in-house expert to compare model versions and write the release summary.</li>
-        <li>Gated every release tag on end-to-end pytest model-performance tests, then reviewed models in a staging environment before production.</li>
-        <li>Co-authored the test plans for the segmentation and risk models, and wrote CAPA write-ups under an ISO 13485 quality system.</li>
-        <li>Turned clinician feedback from 3 sites, relayed through clinical SMEs, into hotfixes shipped in 2 days and a version-3 post-processing release that cut the false discovery rate from 30% to under 10%.</li>
-      </ul>
-
-      <h3 class="entry__group">LLM &amp; clinical NLP</h3>
-      <ul>
-        <li>Designed a multi-document LLM synthesis pipeline that combines clinical reports into structured outputs with ~88% schema compliance and ~75% clinical agreement, staged for testing with stakeholders and clinical SMEs.</li>
-        <li>Built and deployed internally a HIPAA-compliant document-extraction pipeline (OCR + small LLMs) that structured ~3,000 pathology reports, including nodal status, and cut manual curation by 40%.</li>
-        <li>Built a LangGraph + LangChain agentic pipeline for surgical-planning literature triage with hybrid retrieval and reranking on self-hosted LLMs (Qwen3, MedGemma via vLLM), reaching ~85% expert agreement.</li>
-      </ul>
-
-      <h3 class="entry__group">MLOps &amp; delivery</h3>
-      <ul>
-        <li>Built an automated, Git-versioned AWS pipeline (S3, ECR, EC2, Batch) for multi-GPU training, with containerized CI/CD and internal APIs for inference, that cut development and deploy cycles by 85% (2 weeks to 2 days).</li>
-        <li>Ran imaging ETL over 5+ TB (~10k patients, 50k+ MRI series) with cron jobs and AWS Batch.</li>
-        <li>Tracked experiments in MLflow at first, then moved training, tuning and test metrics and the model registry to Weights &amp; Biases.</li>
-        <li>Tracked lineage with a dataset manifest per model checkpoint and md5-verified production checkpoints.</li>
-        <li>Coordinated external vendors and internal teams to run an FDA-compliant annotation pipeline that scaled training and validation data 10× with model-assisted pre-labels from in-house segmentation models and standardized QA protocols.</li>
-        <li>Served as lead engineer on segmentation, writing design docs that turned product goals into model architecture and data requirements and presenting an executive summary of the improvements at every major release.</li>
-        <li>Managed AWS infrastructure for the ML and data science team, including IAM and storage, moving cold data to Glacier and cutting storage from 10 TiB to 1.5 TiB, and reported on it at monthly team reviews.</li>
-        <li>Mentored teammates on 3D Slicer, the AWS retraining pipeline, and AI-assisted development with Cursor and other coding agents.</li>
-      </ul>
-      <div class="entry__meta after"><b>Tools</b> PyTorch, PyTorch Lightning, MONAI, AWS, Docker, LangGraph, LangChain, Pydantic, vLLM, W&amp;B, Hugging Face, FastAPI</div>
-      <div class="entry__meta"><b>Featured on LinkedIn</b> <a href="https://www.linkedin.com/in/vignesh-kannang/overlay/Position/1883747230/treasury/?profileId=ACoAAB0HULoBV7qjsorENz1v4ssLEOjbSt0RyPM">Work samples for this role</a></div>
-    </li>
-
-    <li class="entry">
-      <div class="entry__meta">Jul 2021 – Oct 2021 · PediaMetrix</div>
-      <div class="entry__title">Summer Machine Learning Intern</div>
-      <ul>
-        <li>Developed classification and segmentation models for image-quality estimation in pediatric care.</li>
-        <li>Optimized and deployed the classification pipeline to GCP and to edge devices.</li>
-      </ul>
-      <div class="entry__meta after"><b>Tools</b> PyTorch, TensorFlow, TFX, TF Lite, Keras, GCP, W&amp;B, Optuna</div>
-    </li>
-
-    <li class="entry">
-      <div class="entry__meta">Aug 2021 – Sep 2021 · LumoScan</div>
-      <div class="entry__title">Summer Machine Learning Intern</div>
-      <ul>
-        <li>Fine-tuned deep learning models for skin-lesion detection and classification.</li>
-        <li>Built a skin-lesion abnormality detection pipeline and an interactive dashboard for reviewing results.</li>
-      </ul>
-    </li>
-  </ul>
+<h2 class="kicker">Experience</h2>
+<div class="entry">
+<div class="entry-head"><span class="entry-title">Machine Learning Engineer · SimBioSys</span><span class="date">Nov 2021 – present</span></div>
+<ul class="bullets">
+<li>Led FDA-cleared 3D segmentation models for breast DCE-MRI that build patient-specific digital twins (510(k) <a href="https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K231130">K231130</a>, <a href="https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K243189">K243189</a>, <a href="https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K251766">K251766</a>).</li>
+<li>Co-led a multimodal survival model for 5-year recurrence risk (510(k) <a href="https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K260023">K260023</a>).</li>
+<li>Built clinical document extraction and multi-document synthesis pipelines with small LLMs.</li>
+<li>Built the AWS training, evaluation and release pipeline, and managed AWS for the ML and data science team.</li>
+</ul>
+<a class="hl more" href="ml-engineer.html">Read the full role →</a>
+</div>
+<div class="entry">
+<div class="entry-head"><span class="entry-title">Summer ML Intern · PediaMetrix</span><span class="date">Jul – Oct 2021</span></div>
+<p>Classification and segmentation models for image-quality estimation, deployed to GCP and edge devices.</p>
+</div>
+<div class="entry">
+<div class="entry-head"><span class="entry-title">Summer ML Intern · LumoScan</span><span class="date">Aug – Sep 2021</span></div>
+<p>Skin-lesion detection and classification models, with a detection pipeline and a dashboard for reviewing results.</p>
+</div>
+<div class="entry">
+<div class="entry-head"><span class="entry-title">Summer Research Intern · Qatar Computing Research Institute (QCRI)</span><span class="date">May – Aug 2018</span></div>
+<p>Adapted TICC, a clustering algorithm for multivariate time series, to patients’ sleep data.</p>
+</div>
 </section>
 
 <section id="projects">
-  <h2 class="section-heading">Projects</h2>
-  <ol class="pub-list">
-    <li class="pub-item">
-      <span class="pub-title"><a href="https://github.com/gvkannan-explore/rag-project">PubMed RAG with citation checks</a></span><span class="badge">In progress</span>
-      <ul>
-        <li>Answers questions over a frozen set of 200 breast-cancer PubMed abstracts from a command-line tool.</li>
-        <li>Compares four retrieval setups on the same questions: dense (pgvector), BM25, hybrid with reciprocal rank fusion, and hybrid plus a MiniLM cross-encoder reranker.</li>
-        <li>Requires every generated claim to cite a PMID and quote that abstract word for word, and flags claims that fail with a deterministic validator, without another model call.</li>
-        <li>Runs secret scanning, Ruff, Pyright and offline pytest checks before every push.</li>
-      </ul>
-      <div class="pub-meta">Postgres + pgvector · rank_bm25 · Sentence Transformers · Pydantic · pytest, Ruff, Pyright</div>
-    </li>
-    <li class="pub-item">
-      <span class="pub-title"><a href="https://github.com/gvkannan-explore/MultiLabel_N24/blob/t3/execute-a0-brownfield/plans/Skill-Based%20SDLC%20Brownfield%20Pilot.md">Skill-based SDLC vs. plain AI-assisted coding</a></span><span class="badge">In progress</span>
-      <ul>
-        <li>Tests whether a targeted set of agent skills changes what a coding agent does in an existing codebase, running each task with skills on and off.</li>
-        <li>In the first task, the agent adds ModernBERT and then UltraBERT as encoders to a frozen RoBERTa news classifier.</li>
-        <li>In the second task, the agent finds and fixes seeded CVEs and cites the advisories.</li>
-        <li>Scores each run against a private rubric: broken contracts, duplicated code, "done" claimed without running CI, and invented advisories.</li>
-        <li>Records CI results, diff size, tokens and wall-clock time for every run.</li>
-      </ul>
-      <div class="pub-meta">Codex agent skills adapted from Matt Pocock's and poteto's sets · pytest CI · uv · OSV advisories</div>
-    </li>
-    <li class="pub-item">
-      <span class="pub-title"><a href="https://github.com/gvkannan-explore/MultiLabel_N24">News classification: fine-tuning vs. prompting</a></span><span class="badge done">Completed</span>
-      <ul>
-        <li>Fine-tunes RoBERTa for N24News category classification.</li>
-        <li>Benchmarks it against zero-shot, decoder-only LLMs served through vLLM.</li>
-        <li>Measures when fine-tuning beats prompting.</li>
-      </ul>
-      <div class="pub-meta">PyTorch · Hugging Face Transformers · vLLM</div>
-    </li>
-  </ol>
+<h2 class="kicker">Projects</h2>
+<a class="hl item" href="https://github.com/gvkannan-explore/MultiLabel_N24"><span class="item-title">News classification: fine-tuning vs. prompting <span class="status ok">· completed</span></span><span class="item-sub">RoBERTa against zero-shot LLMs served through vLLM.</span></a>
+<a class="hl item" href="https://github.com/gvkannan-explore/rag-project"><span class="item-title">PubMed RAG with citation checks <span class="status wip">· in progress</span></span><span class="item-sub">Four retrieval setups compared; every claim must cite a PMID.</span></a>
+<a class="hl item" href="https://github.com/gvkannan-explore/MultiLabel_N24/blob/t3/execute-a0-brownfield/plans/Skill-Based%20SDLC%20Brownfield%20Pilot.md"><span class="item-title">Skill-based SDLC vs. AI-assisted coding <span class="status wip">· in progress</span></span><span class="item-sub">Coding-agent runs with skills on and off, scored against a rubric.</span></a>
+</section>
+
+<section id="news">
+<h2 class="kicker">In the news</h2>
+<p class="lede">Press coverage of the SimBioSys products built on these models.</p>
+<div class="cards">
+<a class="hl card" href="https://abcnews.com/GMA/Wellness/40-year-moms-cancer-journey-made-easier-ai/story?id=126682821"><span class="card-src">ABC News · GMA</span><span class="card-title">40-year-old mom's cancer journey made easier thanks to AI<svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M8 7h9v9"></path></svg></span></a>
+<a class="hl card" href="https://abcnews.com/video/137283451/"><span class="card-src">ABC News</span><span class="card-title">AI tool could help predict breast cancer recurrence<svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M8 7h9v9"></path></svg></span></a>
+<a class="hl card" href="https://www.facebook.com/ABCNewsLive/videos/an-fda-cleared-artificial-intelligence-tool-developed-by-simbiosys-helped-40-yea/819977064324505/"><span class="card-src">ABC News Live</span><span class="card-title">An FDA-cleared AI tool developed by SimBioSys<svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M8 7h9v9"></path></svg></span></a>
+<a class="hl card" href="https://www.youtube.com/watch?v=ZENsz0pHIkQ"><span class="card-src">WFMJ</span><span class="card-title">A.I. giving surgeons a new view of cancer<svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M8 7h9v9"></path></svg></span></a>
+</div>
 </section>
 
 <section id="publications">
-  <h2 class="section-heading">Publications</h2>
-  <ol class="pub-list">
-    <li class="pub-item">
-      <span class="pub-title">Performance of an AI-powered visualization software platform for precision surgery in breast cancer patients</span><br>
-      <em>npj Breast Cancer, 2024</em>.<br>
-      <a href="https://doi.org/10.1038/s41523-024-00696-6">Paper</a>
-      <figure class="fig">
-        <div class="frame"><img src="assets/img/npj-breast-cancer-2024-fig1.jpg" alt="TumorSight Viz workflow: DCE-MRI, AI-assisted annotation, 3D segmentation, automated tumor-to-chest, skin and nipple measurements, and convex hulls for multicentric and unicentric disease"></div>
-        <figcaption>TumorSight Viz workflow: from DCE-MRI through AI-assisted annotation to 3D segmentation, automated distance measurements and convex hulls. Fig. 1 from <a href="https://www.nature.com/articles/s41523-024-00696-6/figures/1">the npj Breast Cancer paper</a>, © The Authors, licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</figcaption>
-      </figure>
-    </li>
-    <li class="pub-item">
-      <span class="pub-title">Seeing beyond cancer: multi-institutional validation of object localization and 3D semantic segmentation using deep learning for breast MRI</span><br>
-      <em>SPIE Medical Imaging, 2024</em>.<br>
-      <a href="https://journals.spiedigitallibrary.org/conference-proceedings-of-spie/12927/129270H/Seeing-beyond-cancer--multi-institutional-validation-of-object-localization/10.1117/12.3009341.short">Paper</a> | <a href="https://arxiv.org/abs/2311.16213">arXiv</a>
-    </li>
-  </ol>
+<h2 class="kicker">Publications</h2>
+<a class="hl item" href="https://doi.org/10.1038/s41523-024-00696-6"><span class="item-title">Performance of an AI-powered visualization software platform for precision surgery in breast cancer patients</span><span class="item-meta">M. Weitz, J. R. Pfeiffer, S. Patel, M. Biancalana, A. Pekis, <b>V. Kannan</b>, et al. · npj Breast Cancer, 2024</span></a>
+<a class="hl item" href="https://journals.spiedigitallibrary.org/conference-proceedings-of-spie/12927/129270H/Seeing-beyond-cancer--multi-institutional-validation-of-object-localization/10.1117/12.3009341.short"><span class="item-title">Seeing beyond cancer: multi-institutional validation of object localization and 3D semantic segmentation using deep learning for breast MRI</span><span class="item-meta">A. Pekis, <b>V. Kannan</b>, E. Kaklamanos, A. Antony, S. Patel, T. Earnest · SPIE Medical Imaging, 2024</span></a>
 </section>
 
 <section id="education">
-  <h2 class="section-heading">Education</h2>
-  <ul class="entry-list">
-    <li class="entry">
-      <div class="entry__meta">2019 – 2021 · WPI</div>
-      <div class="entry__title">M.S., Robotics Engineering</div>
-    </li>
-    <li class="entry">
-      <div class="entry__meta">2015 – 2019 · NIT Tiruchirappalli</div>
-      <div class="entry__title">B.Tech., Mechanical Engineering</div>
-    </li>
-  </ul>
+<h2 class="kicker">Education</h2>
+<div class="edu"><span><b>M.S., Robotics Engineering</b><br><span class="school">Worcester Polytechnic Institute (WPI)</span></span><span class="date">2019 – 2021</span></div>
+<div class="edu"><span><b>B.Tech., Mechanical Engineering</b><br><span class="school">National Institute of Technology, Tiruchirappalli</span></span><span class="date">2015 – 2019</span></div>
 </section>
 
-<section id="skills">
-  <h2 class="section-heading">Skills</h2>
-  <dl class="skills">
-    <dt>Languages</dt><dd>Python, SQL</dd>
-    <dt>ML &amp; imaging</dt><dd>PyTorch, PyTorch Lightning (DDP), DeepSpeed, MONAI, scikit-learn, SimpleITK, VoxelMorph, DICOM / NIfTI</dd>
-    <dt>LLM &amp; NLP</dt><dd>LangGraph, LangChain, vLLM, Pydantic, Hugging Face Transformers, spaCy, prompt engineering</dd>
-    <dt>Cloud &amp; MLOps</dt><dd>AWS (S3, ECR, EC2, Batch), Docker, CI/CD, FastAPI, Weights &amp; Biases, MLflow</dd>
-  </dl>
-</section>
-
-</main>
-
-<footer class="col">
-  <a href="mailto:gvkannan.work@gmail.com">Email</a>
-  <span>Last updated November 2026</span>
+<footer class="foot">
+<div class="contacts">
+<a href="mailto:gvkannan.work@gmail.com">Email</a>
+<a href="https://www.linkedin.com/in/vignesh-kannang/">LinkedIn</a>
+<a href="https://github.com/gvkannan-explore">GitHub</a>
+</div>
+<p class="credit">Color palette: <a href="https://www.media.io/color-palette/green-navy-blue-color-palette.html">Green Navy Blue by media.io</a> · Last updated November 2026</p>
 </footer>
 
+</main>
+</div>
 </body>
 </html>
